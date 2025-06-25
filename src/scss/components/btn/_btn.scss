@@ -1,0 +1,25 @@
+$btn-padding-x: 24px !default;
+$btn-padding-y: 10px !default;
+$btn-layer-width: 80px !default;
+$btn-layer-height: 38px !default;
+$btn-layer-spacing: 0px !default;
+$btn-layer-border-radius: 100px !default;
+
+$btn-text-size: 13px !default;
+$btn-text-width: 700 !default;
+$btn-text-height: 18px !default;
+$btn-text-spacing: 1.4px !default;
+$btn-text-color: #0f3412 !default;
+
+$btn-types: (
+    default,
+    transparent,
+    submit,
+    learnmore,
+);
+
+@import "btn-base";
+
+@import "types/default";
+@import "types/submit";
+@import "types/learnmore";

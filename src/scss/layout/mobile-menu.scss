@@ -1,0 +1,36 @@
+@use '../utils/placeholders';
+@use '../utils/variables' as var;
+@use '../utils/functions' as fn;
+@use '../utils/mixins' as mx;
+
+.mobile-menu {
+  display: none;
+
+  @include mx.mq('lg', 'max') {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    border-radius: 0 24px 24px 0;
+    padding: 54px 12px 42px 12px;
+    width: 250px;
+    height: 350px;
+
+    background-color: fn.get-color('secondary-darker');
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+
+    &.is-open {
+      opacity: 1;
+      pointer-events: initial;
+      visibility: visible;
+    }
+  }
+}
+
+.menu-btn {
+  margin-left: 202px;
+}

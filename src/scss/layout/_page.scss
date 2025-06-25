@@ -1,0 +1,13 @@
+@use "../utils/mixins" as mx;
+
+
+
+.page {
+    min-width: 430px;
+    padding-top: 32px;
+
+    @include mx.mq("lg") {
+        min-width: 1728px;
+        padding-top: 0;
+    }
+}

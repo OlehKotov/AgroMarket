@@ -1,0 +1,36 @@
+
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: $btn-layer-spacing;
+
+  width: $btn-layer-width;
+  height: $btn-layer-height;
+  padding: $btn-padding-x $btn-padding-y;
+
+  color: $btn-text-color;
+  border-radius: $btn-layer-border-radius;
+
+  transition-property: background-color;
+  transition-duration: 300ms;
+  transition-timing-function: ease;
+
+  font: inherit;
+  text-transform: none;
+  background-color: transparent;
+  margin: 0;
+  overflow: visible;
+  cursor: pointer;
+
+  .btn-inner {
+    font-size: $btn-text-size;
+    font-weight: $btn-text-width;
+    line-height: 1.4;
+  }
+
+  .btn-icon {
+    fill: currentColor;
+  }
+}
