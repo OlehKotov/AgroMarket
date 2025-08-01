@@ -1,5 +1,5 @@
 $btn-padding-x: 24px !default;
-$btn-padding-y: 10px !default;
+$btn-padding-y: 12px !default;
 $btn-layer-width: 80px !default;
 $btn-layer-height: 38px !default;
 $btn-layer-spacing: 0px !default;
@@ -14,12 +14,13 @@ $btn-text-color: #0f3412 !default;
 $btn-types: (
     default,
     transparent,
-    submit,
+    active,
     learnmore,
 );
 
 @import "btn-base";
 
 @import "types/default";
-@import "types/submit";
+@import "types/active";
 @import "types/learnmore";
+@import "types/features";

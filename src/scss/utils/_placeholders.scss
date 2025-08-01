@@ -6,12 +6,17 @@
   line-height: 1.4;
 }
 
-// %section-title {
-//   font-weight: 600;
-//   font-size: 20px;
-//   line-height: 1.4;
-//   letter-spacing: 0.03em;
-// }
+%hero-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+%hero-text {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.4;
+}
 
 %main-text {
   font-weight: 400;
@@ -31,27 +36,6 @@
   line-height: 1.4;
 }
 
-// %accent-text {
-//   font-weight: 500;
-//   font-size: 16px;
-//   line-height: 1.5;
-//   letter-spacing: 0.03em;
-// }
-
-// %details {
-//   font-weight: 400;
-//   font-size: 14px;
-//   line-height: 1.43;
-//   letter-spacing: 0.04em;
-// }
-
-// %details-accent {
-//   font-weight: 500;
-//   font-size: 14px;
-//   line-height: 1.43;
-//   letter-spacing: 0.04em;
-// }
-
 %section-frame {
   padding: 29px 16px;
   border-radius: 24px;
@@ -61,12 +45,8 @@
   }
 }
 
-// %companies-item {
-//   width: 100%;
-//   height: 196px;
-//   padding: 24px;
-
-//   @include mx.mq('lg') {
-//     width: 100%;
-// };
-// }
+%features-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.4;
+}
