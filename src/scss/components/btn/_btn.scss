@@ -17,6 +17,7 @@ $btn-types: (
     active,
     hero,
     features,
+    offer,
 );
 
 @import "btn-base";
@@ -25,3 +26,4 @@ $btn-types: (
 @import "types/active";
 @import "types/hero";
 @import "types/features";
+@import "types/offer";

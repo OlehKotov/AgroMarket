@@ -1,0 +1,122 @@
+@use '../utils/placeholders';
+@use '../utils/variables' as var;
+@use '../utils/functions' as fn;
+@use '../utils/mixins' as mx;
+
+.offer {
+  position: relative;
+  background: linear-gradient(180deg, #fff 47.45%, #e1e1e1 100%);
+  padding: 10px 0 86px 0;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  &::before {
+    top: 0;
+    left: 0;
+    width: 92px;
+    height: 96px;
+    background-image: url('./../img/plant1.png');
+  }
+
+  &::after {
+    top: 0;
+    right: 0;
+    width: 112px;
+    height: 120px;
+    background-image: url('./../img/plant2.png');
+  }
+}
+
+.offer-title {
+  @extend %offer-title;
+
+  text-align: center;
+  color: fn.get-color('secondary-darker');
+}
+
+.offer-title-span {
+  color: fn.get-color('secondary-dark');
+}
+
+.offer-title-line {
+  width: 50px;
+  height: 5px;
+  border-radius: 50px;
+  margin: 0 auto;
+  background-color: fn.get-color('secondary-darker');
+}
+
+.offer-text {
+  @extend %offer-text;
+
+  margin: 29px auto 0 auto;
+  text-align: center;
+  width: 284px;
+  color: fn.get-color('primary-900');
+}
+
+// .offer-list {
+//   display: flex;
+//   gap: 90px;
+//   margin-top: 27px;
+// }
+
+.offer-list {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 90px;
+  overflow-x: auto;
+  margin-top: 27px;
+
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
+
+  &::-webkit-scrollbar {
+    display: none; 
+  }
+}
+
+.offer-item:first-child {
+  margin-left: -50px;
+ }
+
+.offer-item {
+  border-radius: 16px;
+  padding: 12px 25px;
+  width: 250px;
+  height: 350px;
+  background-color: fn.get-color('secondary-light');
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex-shrink: 0;
+  align-items: center;
+}
+
+.offer-item-img {
+  width: 200px;
+  height: 150px;
+  flex-shrink: 0;
+  border-radius: 16px;
+}
+
+.offer-item-title {
+  @extend %section-text;
+
+  color: fn.get-color('primary-700');
+}
+
+.offer-item-text {
+  @extend %offer-text;
+
+  text-align: center;
+  color: fn.get-color('primary-900');
+}
