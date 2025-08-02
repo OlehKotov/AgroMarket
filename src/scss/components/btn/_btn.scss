@@ -15,12 +15,13 @@ $btn-types: (
     default,
     transparent,
     active,
-    learnmore,
+    hero,
+    features,
 );
 
 @import "btn-base";
 
 @import "types/default";
 @import "types/active";
-@import "types/learnmore";
+@import "types/hero";
 @import "types/features";

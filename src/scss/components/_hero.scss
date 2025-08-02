@@ -5,7 +5,7 @@
 
 .hero {
   height: 615px;
-  background-image: url('./../img/hero_frame_mob.png');
+  background-image: url('./../img/hero_frame_mob.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -13,19 +13,19 @@
 
   @media only screen and (-webkit-min-device-pixel-ratio: 2),
     only screen and (min-resolution: 192dpi) {
-    background-image: url('./../img/hero_frame_mob_2x.png');
+    background-image: url('./../img/hero_frame_mob_2x.jpg');
   }
 
   @include mx.mq('lg') {
     height: 1130px;
-    background-image: url('./../img/hero_frame_dt.png');
+    background-image: url('./../img/hero_frame_dt.jpg');
     display: flex;
     justify-content: center;
     align-items: center;
 
     @media only screen and (-webkit-min-device-pixel-ratio: 2),
       only screen and (min-resolution: 192dpi) {
-      background-image: url('./../img/hero_frame_dt_2x.png');
+      background-image: url('./../img/hero_frame_dt_2x.jpg');
     }
   }
 }

@@ -2,13 +2,13 @@
 @use '../utils/variables' as var;
 @use '../utils/functions' as fn;
 @use '../utils/mixins' as mx;
-@use '../components/btn/btn' as btn with (
-  $btn-layer-width: 120px,
-  $btn-layer-height: 40px,
-  $btn-padding-x: 10px,
-  $btn-padding-y: 9px,
-  $btn-text-size: 16px,
-);
+// @use '../components/btn/btn' as btn with (
+//   $btn-layer-width: 120px,
+//   $btn-layer-height: 40px,
+//   $btn-padding-x: 10px,
+//   $btn-padding-y: 9px,
+//   $btn-text-size: 16px,
+// );
 
 .header {
   display: grid;
