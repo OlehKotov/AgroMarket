@@ -33,3 +33,17 @@ window.matchMedia('(min-width: 1200px)').addEventListener('change', event => {
   refsMenu.openMenuBtn.setAttribute('aria-expanded', false);
   bodyScrollLock.enableBodyScroll(document.body);
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const scrollContainer = document.querySelector('.offer-list');
+
+  if (!scrollContainer) return;
+
+  scrollContainer.addEventListener('wheel', (e) => {
+    if (e.deltaY !== 0 && scrollContainer.scrollWidth > scrollContainer.clientWidth) {
+      e.preventDefault();
+      scrollContainer.scrollLeft += e.deltaY;
+    }
+  }, { passive: false });
+});
+

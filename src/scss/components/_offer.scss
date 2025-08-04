@@ -33,6 +33,23 @@
     height: 120px;
     background-image: url('./../img/plant2.png');
   }
+
+  @include mx.mq('lg') {
+    background: fn.get-color('primary-50');
+    padding: 37px 0 102px 0;
+
+    &::before {
+      top: 0;
+      left: 0;
+      width: 335px;
+      height: 406px;
+      background-image: url('./../img/plant3.png');
+    }
+
+    &::after {
+      display: none;
+    }
+  }
 }
 
 .offer-title {
@@ -40,6 +57,10 @@
 
   text-align: center;
   color: fn.get-color('secondary-darker');
+
+  @include mx.mq('lg') {
+    font-size: 48px;
+  }
 }
 
 .offer-title-span {
@@ -48,10 +69,14 @@
 
 .offer-title-line {
   width: 50px;
-  height: 5px;
+  height: 6px;
   border-radius: 50px;
   margin: 0 auto;
   background-color: fn.get-color('secondary-darker');
+
+  @include mx.mq('lg') {
+    width: 106px;
+  }
 }
 
 .offer-text {
@@ -59,15 +84,19 @@
 
   margin: 29px auto 0 auto;
   text-align: center;
-  width: 284px;
+  width: 286px;
   color: fn.get-color('primary-900');
-}
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
 
-// .offer-list {
-//   display: flex;
-//   gap: 90px;
-//   margin-top: 27px;
-// }
+  @include mx.mq('lg') {
+    font-size: 19px;
+    margin: 32px auto 0 auto;
+    width: 1004px;
+  }
+}
 
 .offer-list {
   display: flex;
@@ -76,17 +105,30 @@
   overflow-x: auto;
   margin-top: 27px;
 
-  scrollbar-width: none; 
-  -ms-overflow-style: none; 
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-behavior: smooth;
 
   &::-webkit-scrollbar {
-    display: none; 
+    display: none;
+  }
+
+  @include mx.mq('lg') {
+    gap: 120px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    overflow-x: none;
   }
 }
 
 .offer-item:first-child {
   margin-left: -50px;
- }
+
+  @include mx.mq('lg') {
+    margin-left: 0;
+  }
+}
 
 .offer-item {
   border-radius: 16px;
@@ -99,6 +141,13 @@
   gap: 16px;
   flex-shrink: 0;
   align-items: center;
+
+  @include mx.mq('lg') {
+    padding: 12px 10px;
+    width: 300px;
+    height: 400px;
+    gap: 24px;
+  }
 }
 
 .offer-item-img {
@@ -106,12 +155,20 @@
   height: 150px;
   flex-shrink: 0;
   border-radius: 16px;
+
+  @include mx.mq('lg') {
+    width: 280px;
+  }
 }
 
 .offer-item-title {
   @extend %section-text;
 
   color: fn.get-color('primary-700');
+
+  @include mx.mq('lg') {
+    font-size: 28px;
+  }
 }
 
 .offer-item-text {
@@ -119,4 +176,8 @@
 
   text-align: center;
   color: fn.get-color('primary-900');
+
+  @include mx.mq('lg') {
+    font-size: 19px;
+  }
 }

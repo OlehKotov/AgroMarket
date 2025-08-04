@@ -10,11 +10,10 @@
     width: 120px;
     height: 38px;
 
-    // @include mx.mq('lg') {
-    //   padding: 10px;
-    //   width: 112px;
-    //   height: 38px;
-    // }
+    @include mx.mq('lg') {
+      padding: 10px;
+      width: 120px;
+    }
 
     .btn-inner {
       text-align: center;
