@@ -17,12 +17,15 @@
   }
 
   @include mx.mq('lg') {
-    background-image: url('./../img/features_frame_dt.jpg');
-    padding: 150px 102px;
+    background-image: url('./../img/choose_frame_dt.jpg');
+    padding: 76px 148px 142px 261px;
+    display: flex;
+    align-items: center;
+    gap: 408px;
 
     @media only screen and (-webkit-min-device-pixel-ratio: 2),
       only screen and (min-resolution: 192dpi) {
-      background-image: url('./../img/features_frame_dt_2x.jpg');
+      background-image: url('./../img/choose_frame_dt_2x.jpg');
     }
   }
 }
@@ -32,6 +35,10 @@
 
   text-align: center;
   color: fn.get-color('secondary-normal');
+
+  @include mx.mq('lg') {
+    font-size: 48px;
+  }
 }
 
 .choose-title-span {
@@ -44,6 +51,11 @@
   border-radius: 5px;
   margin: 0 auto;
   background-color: fn.get-color('secondary-normal');
+
+  @include mx.mq('lg') {
+    width: 100px;
+    margin-right: 0;
+  }
 }
 
 .choose-subtract {
@@ -51,6 +63,22 @@
   top: 63px;
   left: 50%;
   transform: translateX(-50%);
+
+  @include mx.mq('lg') {
+    display: none;
+  }
+}
+
+.choose-subtract-dt {
+  display: none;
+
+  @include mx.mq('lg') {
+    display: block;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 .choose-list {
@@ -60,6 +88,11 @@
   align-items: center;
   gap: 32px;
   margin-top: 65px;
+
+  @include mx.mq('lg') {
+  gap: 115px;
+  margin-top: 0;
+  }
 }
 
 .choose-item {
@@ -73,6 +106,12 @@
   align-items: center;
   gap: 12px;
   z-index: 3;
+
+  @include mx.mq('lg') {
+  padding: 25px 25px 15px 15px;
+  width: 550px;
+  height: 150px;
+  }
 }
 
 .choose-item-icon {
