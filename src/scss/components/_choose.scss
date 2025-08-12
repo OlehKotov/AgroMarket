@@ -75,7 +75,14 @@
   z-index: 3;
 }
 
-.choose-icon {
+.choose-item-icon {
+  border-radius: 100px;
+  background-color: fn.get-color('secondary-light-active');
+}
+
+.choose-item-plant {
+  width: 24px;
+  height: 24px;
 }
 
 .choose-item-title {
