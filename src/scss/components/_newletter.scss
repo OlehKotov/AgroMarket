@@ -1,0 +1,50 @@
+@use '../utils/placeholders';
+@use '../utils/variables' as var;
+@use '../utils/functions' as fn;
+@use '../utils/mixins' as mx;
+
+.newletter {
+  padding: 18px 27px 72px 27px;
+  background-color: fn.get-color('secondary-darker');
+}
+
+.newletter-title {
+  @extend %section-text;
+
+  text-align: center;
+  color: fn.get-color('secondary-light');
+}
+
+.newletter-text {
+  @extend %offer-text;
+
+  margin-top: 8px;
+  text-align: center;
+  color: fn.get-color('secondary-light');
+}
+
+.newletter-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  margin-top: 45px;
+}
+
+.newletter-label-input {
+}
+
+.newletter-input {
+  @extend %features-text;
+
+  color: fn.get-color('primary-900'); 
+  border-radius: 100px;
+  padding: 12px;
+  width: 376px;
+  height: 42px;
+  background-color: fn.get-color('secondary-light-active');
+
+   &::placeholder {
+    color: rgba(fn.get-color('primary-800'), 0.4);
+  }
+}

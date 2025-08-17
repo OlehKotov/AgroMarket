@@ -49,3 +49,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+const form = document.querySelector('.newletter-form');
+
+form.addEventListener('submit', function (e) {
+  e.preventDefault(); 
+  console.log('Форма отправлена!');
+});
+

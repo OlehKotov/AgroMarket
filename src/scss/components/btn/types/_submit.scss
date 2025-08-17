@@ -1,0 +1,39 @@
+@use '../../../utils/functions' as fn;
+@use '../../../utils/mixins' as mx;
+
+@if index($btn-types, offer) {
+  .btn--submit {
+    background-color: fn.get-color('primary-900');
+    color: fn.get-color('white-50');
+    padding: 10px;
+    border-radius: 100px;
+    width: 300px;
+    height: 38px;
+
+    // @include mx.mq('lg') {
+    //   padding: 10px;
+    //   width: 120px;
+    // }
+
+    .btn-inner {
+      text-align: center;
+      font-weight: 700;
+      font-size: 13px;
+      line-height: 1.4;
+    }
+
+    &:active {
+      background-color: fn.get-color('primary-800');
+    }
+
+    @media (hover: hover) {
+      &:hover,
+      &:focus {
+        background-color: fn.get-color('primary-800');
+      }
+    }
+    &[disabled] {
+      background-color: #f5f5f5;
+    }
+  }
+}
