@@ -11,6 +11,20 @@
   background-repeat: no-repeat;
   padding: 29px 0 60px 0;
 
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      rgba(255, 255, 255, 0.6),
+      rgba(255, 255, 255, 0.6)
+    );
+    z-index: 0;
+  }
+
   &::before {
     content: '';
     position: absolute;
@@ -34,20 +48,6 @@
     background-image: url('./../img/partners_frame_back_dt.png');
     padding: 31px 27px 109px 27px;
     height: 500px;
-
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: linear-gradient(
-        rgba(255, 255, 255, 0.6),
-        rgba(255, 255, 255, 0.6)
-      );
-      z-index: 0;
-    }
 
     &::before {
       content: '';
