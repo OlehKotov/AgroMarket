@@ -35,15 +35,17 @@ window.matchMedia('(min-width: 1200px)').addEventListener('change', event => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-  const scrollContainer = document.querySelector('.offer-list');
+  const scrollContainers = document.querySelectorAll('.offer-list, .partners-list');
 
-  if (!scrollContainer) return;
+  if (!scrollContainers.length) return;
 
-  scrollContainer.addEventListener('wheel', (e) => {
-    if (e.deltaY !== 0 && scrollContainer.scrollWidth > scrollContainer.clientWidth) {
-      e.preventDefault();
-      scrollContainer.scrollLeft += e.deltaY;
-    }
-  }, { passive: false });
+  scrollContainers.forEach(scrollContainer => {
+    scrollContainer.addEventListener('wheel', (e) => {
+      if (e.deltaY !== 0 && scrollContainer.scrollWidth > scrollContainer.clientWidth) {
+        e.preventDefault();
+        scrollContainer.scrollLeft += e.deltaY;
+      }
+    }, { passive: false });
+  });
 });
 

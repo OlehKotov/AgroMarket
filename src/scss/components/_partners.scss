@@ -11,17 +11,13 @@
   background-repeat: no-repeat;
   padding: 29px 0 60px 0;
 
-  &::before,
-  &::after {
+  &::before {
     content: '';
     position: absolute;
     background-size: contain;
     background-repeat: no-repeat;
     z-index: 1;
     pointer-events: none;
-  }
-
-  &::before {
     top: 0;
     left: 0;
     width: 122px;
@@ -35,17 +31,41 @@
   }
 
   @include mx.mq('lg') {
-    // background: fn.get-color('primary-50');
-    // padding: 37px 0 102px 0;
+    background-image: url('./../img/partners_frame_back_dt.png');
+    padding: 31px 27px 109px 27px;
+    height: 500px;
 
-    // &::before {
-    //   top: 0;
-    //   left: 0;
-    //   width: 335px;
-    //   height: 406px;
-    //   background-image: url('./../img/plant3.png');
-    // }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(
+        rgba(255, 255, 255, 0.6),
+        rgba(255, 255, 255, 0.6)
+      );
+      z-index: 0;
+    }
+
+    &::before {
+      content: '';
+      width: 595px;
+      height: 637px;
+      background-image: url('./../img/deco-tree-dt.png');
+    }
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 2),
+      only screen and (min-resolution: 192dpi) {
+      background-image: url('./../img/partners_frame_back_dt_2x.png');
+    }
   }
+}
+
+.partners > * {
+  position: relative;
+  z-index: 1;
 }
 
 .partners-title {
@@ -55,7 +75,7 @@
   color: fn.get-color('secondary-normal-active');
 
   @include mx.mq('lg') {
-    font-size: 48px;
+    font-size: 33px;
   }
 }
 
@@ -68,12 +88,17 @@
     content: '';
     position: absolute;
     left: 80%;
-    bottom: -5px;
+    bottom: -8px;
     transform: translateX(-50%);
     width: 32px;
     height: 6px;
     border-radius: 50px;
     background-color: fn.get-color('secondary-normal-active');
+
+    @include mx.mq('lg') {
+      left: 63%;
+      width: 103px;
+    }
   }
 }
 
@@ -82,7 +107,7 @@
   flex-wrap: nowrap;
   gap: 48px;
   overflow-x: auto;
-  margin-top: 20px;
+  margin-top: 25px;
 
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -92,16 +117,14 @@
     display: none;
   }
 
-//   @include mx.mq('lg') {
-//     gap: 120px;
-//     justify-content: center;
-//     align-items: center;
-//     margin-top: 40px;
-//     overflow-x: none;
-//   }
+  @include mx.mq('lg') {
+    justify-content: center;
+    align-items: center;
+    margin-top: 145px;
+    overflow-x: none;
+  }
 }
 
 .partners-item {
-  width: 238px;
-  height: 150px;
+  flex-shrink: 0;
 }
