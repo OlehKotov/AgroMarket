@@ -1,0 +1,56 @@
+@use '../utils/placeholders';
+@use '../utils/variables' as var;
+@use '../utils/functions' as fn;
+@use '../utils/mixins' as mx;
+
+.farm-header {
+  position: relative;
+}
+
+.farm-subtract {
+  position: absolute;
+  top: 161px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.farm-header-title {
+  @extend %section-text;
+
+  padding-top: 191px;
+  text-align: center;
+  color: fn.get-color('secondary-darker');
+  position: relative;
+  z-index: 1;
+}
+
+.farm-header-container {
+    position: relative;
+    z-index: 1;
+    margin-top: 82px;
+    display: flex;
+    gap: 7px;
+}
+
+.farm-header-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 127px;
+}
+
+.farm-header-item {
+    @extend %features-text;
+
+    color: fn.get-color('secondary-darker');
+}
+
+.farm-header-link {
+    @extend %farm-link;
+
+    width: 40px;
+    height: 45px;
+    text-align: center;
+    color: fn.get-color('primary-900');
+}

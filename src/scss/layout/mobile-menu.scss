@@ -32,5 +32,22 @@
 }
 
 .menu-btn {
-  margin-left: 202px;
+  margin-left: 190px;
+}
+
+.mobile-menu-list {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 46px;
+  align-items: flex-start;
+}
+
+.mobile-menu-link {
+  @extend %choose-title;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: fn.get-color('secondary-light-hover');
 }

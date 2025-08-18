@@ -35,24 +35,34 @@ window.matchMedia('(min-width: 1200px)').addEventListener('change', event => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-  const scrollContainers = document.querySelectorAll('.offer-list, .partners-list');
+  const scrollContainers = document.querySelectorAll(
+    '.offer-list, .partners-list'
+  );
 
   if (!scrollContainers.length) return;
 
   scrollContainers.forEach(scrollContainer => {
-    scrollContainer.addEventListener('wheel', (e) => {
-      if (e.deltaY !== 0 && scrollContainer.scrollWidth > scrollContainer.clientWidth) {
-        e.preventDefault();
-        scrollContainer.scrollLeft += e.deltaY;
-      }
-    }, { passive: false });
+    scrollContainer.addEventListener(
+      'wheel',
+      e => {
+        if (
+          e.deltaY !== 0 &&
+          scrollContainer.scrollWidth > scrollContainer.clientWidth
+        ) {
+          e.preventDefault();
+          scrollContainer.scrollLeft += e.deltaY;
+        }
+      },
+      { passive: false }
+    );
   });
 });
 
 const form = document.querySelector('.newletter-form');
-
-form.addEventListener('submit', function (e) {
-  e.preventDefault(); 
-  console.log('Форма отправлена!');
-});
-
+if (form) {
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    console.log('Форма отправлена!');
+    form.reset();
+  });
+}

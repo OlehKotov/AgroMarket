@@ -12,10 +12,11 @@
   grid-template-rows: auto auto;
   gap: 22px 186px;
   text-align: center;
-  padding: 0 12px;
+  padding: 32px 12px 2px 12px;
 
   background-color: fn.get-color('dark');
   box-shadow: 0px 1px 0px 0px #292932 inset;
+  align-items: center;
 
   @include mx.mq('lg') {
     grid-template-areas: 'logo nav order';
@@ -45,8 +46,14 @@
 }
 
 .burger-btn {
+  display: flex;               
+  justify-content: center;
+  align-items: center;
   grid-area: menu;
   justify-self: start;
+  width: 32px;
+  height: 32px;
+  padding: 0;
 
   @include mx.mq('lg') {
     display: none;

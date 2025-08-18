@@ -1,13 +1,24 @@
-@use "../utils/mixins" as mx;
-
-
+@use '../utils/mixins' as mx;
 
 .page {
-    min-width: 430px;
-    padding-top: 32px;
+  min-width: 430px;
 
-    @include mx.mq("lg") {
-        min-width: 1728px;
-        padding-top: 0;
-    }
+  @include mx.mq('lg') {
+    min-width: 1728px;
+    padding-top: 0;
+  }
+}
+
+
+.page-farm-header {
+  background-image: url('./../img/farm_header_mob.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 932px;
+
+  @media only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi) {
+    background-image: url('./../img/farm_header_mob_2x.jpg');
+  }
 }

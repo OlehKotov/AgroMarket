@@ -30,10 +30,6 @@
     width: 544px;
   }
 }
-// .logo {
-// }
-// .logo-icon {
-// }
 
 .footer-logo-text {
   @extend %offer-text;
@@ -50,7 +46,7 @@
 .footer-links {
   display: flex;
   flex-direction: column;
-  gap: 62px;
+  gap: 32px;
   width: 400px;
 
   @include mx.mq('lg') {
@@ -95,6 +91,7 @@
   @include mx.mq('lg') {
     width: 589px;
     margin-top: 112px;
+    gap: 73px;
   }
 }
 
