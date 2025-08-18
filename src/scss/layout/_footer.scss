@@ -1,0 +1,84 @@
+@use '../utils/placeholders';
+@use '../utils/variables' as var;
+@use '../utils/functions' as fn;
+@use '../utils/mixins' as mx;
+
+.footer {
+  padding: 31px 12px 12px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 55px;
+}
+
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+}
+// .logo {
+// }
+// .logo-icon {
+// }
+
+.footer-logo-text {
+  @extend %offer-text;
+
+  text-align: center;
+  color: fn.get-color('white-50');
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 62px;
+}
+
+.footer-links-title {
+  @extend %menu-text;
+
+  color: fn.get-color('white-50');
+}
+
+.footer-links-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.footer-links-item {
+}
+
+.footer-links-link {
+  @extend %section-text;
+
+  color: fn.get-color('secondary-light-hover');
+}
+
+.current {
+  color: fn.get-color('secondary-normal');
+}
+
+.footer-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.footer-contacts-title {
+  @extend %menu-text;
+
+  color: fn.get-color('white-50');
+}
+.footer-contacts-adress {
+    @extend %offer-text;
+
+    color: fn.get-color('white-50');
+}
+
+.footer-contacts-adress-title {
+    @extend %choose-title;
+
+    color: fn.get-color('white-50');
+}
