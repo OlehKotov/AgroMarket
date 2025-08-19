@@ -6,17 +6,39 @@
 .farm-header {
   position: relative;
   text-align: center;
+
+  @include mx.mq('lg') {
+    margin-top: -70px;
+  }
 }
 
 .farm-subtract-wrapper {
   position: relative;
   display: inline-block;
   margin-top: 161px;
+
+  @include mx.mq('lg') {
+    margin-top: 0;
+  }
 }
 
-.farm-subtract {
+.farm-subtract-mob {
   position: absolute;
   transform: translateX(-50%);
+
+  @include mx.mq('lg') {
+    display: none;
+  }
+}
+
+.farm-subtract-dt {
+  display: none;
+
+  @include mx.mq('lg') {
+    display: block;
+    position: absolute;
+    transform: translateX(-50%);
+  }
 }
 
 .farm-ellipse-container {
@@ -25,16 +47,37 @@
   top: 176px;
   transform: translate(-50%, -50%);
   z-index: 2;
+
+  @include mx.mq('lg') {
+    right: 40px;
+    top: 555px;
+  }
 }
 
-.farm-ellipse {
+.farm-ellipse-mob {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  @include mx.mq('lg') {
+    display: none;
+  }
 }
 
-.farm-ellipse-link {
+.farm-ellipse-dt {
+  display: none;
+
+  @include mx.mq('lg') {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.farm-ellipse-link-mob {
   @extend %farm-link;
 
   position: absolute;
@@ -48,6 +91,27 @@
 
   text-align: center;
   color: fn.get-color('primary-900');
+
+  @include mx.mq('lg') {
+    display: none;
+  }
+}
+
+.farm-ellipse-link-dt {
+  @extend %farm-link;
+  display: none;
+
+  @include mx.mq('lg') {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+
+    display: block;
+    width: 120px;
+    font-size: 23px;
+    color: fn.get-color('primary-50');
+  }
 }
 
 .farm-header-title {
@@ -58,6 +122,11 @@
   color: fn.get-color('secondary-darker');
   position: relative;
   z-index: 1;
+
+  @include mx.mq('lg') {
+    font-size: 48px;
+    padding-top: 85px;
+  }
 }
 
 .farm-header-list-container {
@@ -68,6 +137,11 @@
   gap: 75px;
   position: relative;
   transform: translateX(5px);
+
+  @include mx.mq('lg') {
+    margin-top: 252px;
+    gap: 393px;
+  }
 }
 
 .farm-header-list {
@@ -75,10 +149,18 @@
   flex-direction: column;
   gap: 12px;
   text-align: left;
+
+  @include mx.mq('lg') {
+    gap: 64px;
+  }
 }
 
 .farm-header-item {
   @extend %farm-item;
 
   color: fn.get-color('secondary-darker');
+
+  @include mx.mq('lg') {
+    font-size: 33px;
+  }
 }

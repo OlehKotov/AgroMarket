@@ -9,7 +9,6 @@
   }
 }
 
-
 .page-farm-header {
   background-image: url('./../img/farm_header_mob.jpg');
   background-size: cover;
@@ -20,5 +19,23 @@
   @media only screen and (-webkit-min-device-pixel-ratio: 2),
     only screen and (min-resolution: 192dpi) {
     background-image: url('./../img/farm_header_mob_2x.jpg');
+  }
+
+  @include mx.mq('lg') {
+    background-image: url('./../img/farm_header_dt.jpg');
+    min-height: 1180px;
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 2),
+      only screen and (min-resolution: 192dpi) {
+      background-image: url('./../img/farm_header_dt_2x.jpg');
+    }
+  }
+}
+
+.page-farm-header .header {
+  @include mx.mq('lg') {
+    background: transparent;
+    position: relative;
+    z-index: 2;
   }
 }
