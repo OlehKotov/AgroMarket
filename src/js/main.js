@@ -66,3 +66,29 @@ if (form) {
     form.reset();
   });
 }
+
+const slidesContainer = document.querySelector(".fruit-farm-slides");
+const slides = document.querySelectorAll(".fruit-farm-slide");
+const prevBtn = document.querySelector(".fruit-farm-prev");
+const nextBtn = document.querySelector(".fruit-farm-next");
+
+let currentIndex = 0; 
+const slideWidth = slides[0].offsetWidth + 12; 
+
+function updateSlidePosition() {
+  slidesContainer.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+}
+
+nextBtn.addEventListener("click", () => {
+  if (currentIndex < slides.length - 2) { 
+    currentIndex++;
+    updateSlidePosition();
+  }
+});
+
+prevBtn.addEventListener("click", () => {
+  if (currentIndex > 0) {
+    currentIndex--;
+    updateSlidePosition();
+  }
+});

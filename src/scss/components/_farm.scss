@@ -4,7 +4,7 @@
 @use '../utils/mixins' as mx;
 
 .fruit-farm {
-  padding: 12px;
+  padding: 23px 15px;
   background-color: fn.get-color('primary-50');
   margin-top: 21px;
   display: flex;
@@ -27,11 +27,12 @@
   color: fn.get-color('secondary-dark-active');
 }
 
-.fruit-farm-text {
+.fruit-farm-text-mob {
   @extend %farm-text;
 
   text-align: center;
   color: fn.get-color('secondary-dark-active');
+  width: 400px;
 }
 
 .fruit-farm-text-dt {
@@ -52,6 +53,7 @@
   display: flex;
   gap: 12px;
   align-items: center;
+  transition: transform 0.5s ease-in-out;
 }
 
 .fruit-farm-slide {
@@ -73,7 +75,7 @@
   @extend %choose-title;
 
   position: absolute;
-  top: 165px;
+  top: 175px;
   left: 50%;
   transform: translate(-50%, -50%);
 
