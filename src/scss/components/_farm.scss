@@ -1,0 +1,73 @@
+@use '../utils/placeholders';
+@use '../utils/variables' as var;
+@use '../utils/functions' as fn;
+@use '../utils/mixins' as mx;
+
+.fruit-farm {
+  padding: 12px;
+  background-color: fn.get-color('primary-50');
+  margin-top: 21px;
+}
+
+.fruit-farm-title-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.fruit-farm-title-icon {
+}
+
+.fruit-farm-title {
+  @extend %offer-title;
+
+  color: fn.get-color('secondary-dark-active');
+}
+
+.fruit-farm-text {
+  @extend %farm-text;
+
+  margin-top: 8px;
+  text-align: center;
+  color: fn.get-color('secondary-dark-active');
+}
+
+.fruit-farm-text-dt {
+  display: none;
+
+  @include mx.mq('lg') {
+    display: block;
+  }
+}
+
+.fruit-farm-slider {
+  position: relative;
+  margin-top: 12px;
+  overflow: hidden;
+}
+
+.fruit-farm-slides {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  transition: transform 0.5s ease-in-out;
+}
+
+.fruit-farm-slide {
+  position: relative;
+}
+
+.fruit-farm-slide-img {
+  border-radius: 16px;
+  width: 194px;
+  height: 202px;
+  min-width: 100%;
+  flex-shrink: 0;
+}
+.fruit-farm-slide-name {
+  position: absolute;
+  top: 165px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

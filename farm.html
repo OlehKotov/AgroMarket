@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/fav.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agro Market</title>
+  </head>
+
+  <body class="page">
+    <header class="header">
+      <a class="logo" href="./index.html">
+        <picture>
+          <source
+            media="(min-width: 1728px)"
+            srcset="./src/img/logo-desktop.png" />
+          <img
+            src="./src/img/logo-mobile.png"
+            class="logo-icon"
+            width="70"
+            height="80"
+            alt="Logo"
+            loading="lazy"
+            decoding="async" />
+        </picture>
+      </a>
+
+      <button
+        class="burger-btn js-menu-open"
+        type="button"
+        aria-expanded="false"
+        aria-controls="Open menu">
+        <svg class="menu-btn-icon" width="32" height="32">
+          <use href="./src/img/icons.svg#icon-menu"></use>
+        </svg>
+      </button>
+
+      <ul class="menu-list">
+        <li class="menu-item">
+          <a class="menu-link current" href="./index.html"> Home </a>
+        </li>
+        <li class="menu-item">
+          <a class="menu-link" href="./farm-header.html"> Farm </a>
+        </li>
+        <li class="menu-item">
+          <a class="menu-link" href=""> Market </a>
+        </li>
+      </ul>
+
+      <div class="cart-link">
+        <a class="cart-link-icon" href="">
+          <svg class="menu-icon" width="44" height="44">
+            <use xlink:href="./src/img/icons.svg#icon-cart-icon"></use>
+          </svg>
+        </a>
+        <button class="active-btn btn btn--active" type="button">
+          <span class="btn-inner">Get in Touch</span>
+        </button>
+      </div>
+
+      <nav class="mobile-menu js-menu" id="sidebar-menu">
+        <button
+          class="menu-btn js-menu-close"
+          type="button"
+          aria-label="Close menu">
+          <svg class="menu-btn-icon" width="24" height="24">
+            <use href="./src/img/icons.svg#icon-x-close"></use>
+          </svg>
+        </button>
+
+        <ul class="mobile-menu-list">
+          <li class="mobile-menu-item">
+            <a class="mobile-menu-link current" href="./index.html">
+              <svg class="mobile-menu-icon" width="22" height="19">
+                <use href="./src/img/icons.svg#menu-icon-home"></use>
+              </svg>
+              Home
+            </a>
+          </li>
+          <li class="mobile-menu-item">
+            <a class="mobile-menu-link" href="./farm-header.html">
+              <svg class="mobile-menu-icon" width="22" height="19">
+                <use href="./src/img/icons.svg#menu-icon-farm"></use>
+              </svg>
+              Farm
+            </a>
+          </li>
+          <li class="mobile-menu-item">
+            <a class="mobile-menu-link" href="">
+              <svg class="mobile-menu-icon" width="22" height="19">
+                <use href="./src/img/icons.svg#menu-icon-market"></use>
+              </svg>
+              Market
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main">
+      <section class="fruit-farm">
+        <div class="fruit-farm-title-container">
+          <svg class="fruit-farm-title-icon" width="32" height="32">
+            <use href="./src/img/icons.svg#FruitFarm"></use>
+          </svg>
+          <h2 class="fruit-farm-title">Fruit Farm</h2>
+        </div>
+        <p class="fruit-farm-text">
+          Lorem ipsum dolor sit amet consectetur. Malesuada euismod laoreet
+          fermentum venenatis est lobortis orci.
+          <span class="fruit-farm-text-dt"
+            >Et hac eu morbi et mauris nunc enim elit. Nunc tortor enim morbi
+            tincidunt accumsan lectus. Dictum mi mattis nibh</span
+          >
+        </p>
+
+        <div class="fruit-farm-slider">
+          <div class="fruit-farm-slides">
+            <div class="fruit-farm-slide">
+              <picture class="fruit-farm-slide-img">
+                <source
+                  media="(min-width: 1728px)"
+                  srcset="./src/img/slider/fruit/dt/orange.jpg" />
+                <img src="./src/img/slider/fruit/mob/orange.jpg" alt="orange" />
+              </picture>
+              <div class="fruit-farm-slide-name">Orange Farm</div>
+            </div>
+
+            <div class="fruit-farm-slide">
+              <picture class="fruit-farm-slide-img">
+                <source
+                  media="(min-width: 1728px)"
+                  srcset="./src/img/slider/fruit/dt/apple.jpg" />
+                <img src="./src/img/slider/fruit/mob/apple.jpg" alt="apple" />
+              </picture>
+              <div class="fruit-farm-slide-name">Apple Farm</div>
+            </div>
+
+            <div class="fruit-farm-slide">
+              <picture class="fruit-farm-slide-img">
+                <source
+                  media="(min-width: 1728px)"
+                  srcset="./src/img/slider/fruit/dt/mango.jpg" />
+                <img src="./src/img/slider/fruit/mob/mango.jpg" alt="mango" />
+              </picture>
+              <div class="fruit-farm-slide-name">Mango Farm</div>
+            </div>
+
+            <div class="fruit-farm-slide">
+              <picture class="fruit-farm-slide-img">
+                <source
+                  media="(min-width: 1728px)"
+                  srcset="./src/img/slider/fruit/dt/banana.jpg" />
+                <img src="./src/img/slider/fruit/mob/banana.jpg" alt="banana" />
+              </picture>
+              <div class="fruit-farm-slide-name">Banana Farm</div>
+            </div>
+
+            <div class="fruit-farm-slide">
+              <picture class="fruit-farm-slide-img">
+                <source
+                  media="(min-width: 1728px)"
+                  srcset="./src/img/slider/fruit/dt/pineapple.jpg" />
+                <img src="./src/img/slider/fruit/mob/pineapple.jpg" alt="pineapple" />
+              </picture>
+              <div class="fruit-farm-slide-name">Pineapple Farm</div>
+            </div>
+
+            <div class="fruit-farm-slide">
+              <picture class="fruit-farm-slide-img">
+                <source
+                  media="(min-width: 1728px)"
+                  srcset="./src/img/slider/fruit/dt/pawpaw.jpg" />
+                <img src="./src/img/slider/fruit/mob/pawpaw.jpg" alt="pawpaw" />
+              </picture>
+              <div class="fruit-farm-slide-name">Pawpaw Farm</div>
+            </div>
+          </div>
+
+          <button class="prev">
+            <svg width="32" height="32">
+              <use href="./src/img/icons.svg#icon-prev"></use>
+            </svg>
+          </button>
+
+          <button class="next">
+            <svg width="32" height="32">
+              <use href="./src/img/icons.svg#icon-next"></use>
+            </svg>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-logo-container">
+        <a class="logo" href="./index.html">
+          <picture>
+            <source
+              media="(min-width: 1728px)"
+              srcset="./src/img/logo-desktop.png" />
+            <img
+              src="./src/img/logo-mobile.png"
+              class="logo-icon"
+              width="70"
+              height="80"
+              alt="Logo"
+              loading="lazy"
+              decoding="async" />
+          </picture>
+        </a>
+        <p class="footer-logo-text">
+          Lorem ipsum dolor sit amet consectetur. Tortor viverra elementum
+          mauris suscipit porttitor interdum mauris egestas. Et consectetur nunc
+          proin vitae congue odio proin purus. Nisi tristique tincidunt diam et.
+          Tellus leo eu felis odio fusce massa nisl sit integer. Vel gravida
+          lacus nec.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <h2 class="footer-links-title">Quick Links</h2>
+        <ul class="footer-links-list">
+          <li class="footer-links-item">
+            <a class="footer-links-link current" href="./index.html"> Home </a>
+          </li>
+          <li class="footer-links-item">
+            <a class="footer-links-link" href="./farm-header.html"> Farm </a>
+          </li>
+          <li class="footer-links-item">
+            <a class="footer-links-link" href=""> Market </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-contacts">
+        <h2 class="footer-contacts-title">Contacts</h2>
+        <ul class="footer-contacts-list">
+          <li class="footer-contacts-item">
+            <span class="footer-contacts-item-title">Address:</span> Plot 5, Idu
+            Industrial Estate, Abuja
+          </li>
+          <li class="footer-contacts-item">
+            <span class="footer-contacts-item-title">Phone Numbers:</span>
+            2348012345678, 23470123456789
+          </li>
+          <li class="footer-contacts-item">
+            <span class="footer-contacts-item-title">Email:</span>
+            hello@agromarket.com
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <script type="module" src="./src/js/main.js"></script>
+  </body>
+</html>
