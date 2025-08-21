@@ -66,21 +66,28 @@ if (form) {
     form.reset();
   });
 }
-
 const slidesContainer = document.querySelector(".fruit-farm-slides");
 const slides = document.querySelectorAll(".fruit-farm-slide");
 const prevBtn = document.querySelector(".fruit-farm-prev");
 const nextBtn = document.querySelector(".fruit-farm-next");
 
-let currentIndex = 0; 
-const slideWidth = slides[0].offsetWidth + 12; 
+let currentIndex = 0;
+const slideGap = 12;
+const slideWidth = slides[0].offsetWidth + slideGap;
+
+// сколько карточек видно (2 или 3)
+function getVisibleSlides() {
+  const sliderWidth = document.querySelector(".fruit-farm-slider").offsetWidth;
+  return Math.floor(sliderWidth / slideWidth);
+}
 
 function updateSlidePosition() {
   slidesContainer.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
 }
 
 nextBtn.addEventListener("click", () => {
-  if (currentIndex < slides.length - 2) { 
+  const visibleSlides = getVisibleSlides();
+  if (currentIndex < slides.length - visibleSlides) {
     currentIndex++;
     updateSlidePosition();
   }
@@ -89,6 +96,15 @@ nextBtn.addEventListener("click", () => {
 prevBtn.addEventListener("click", () => {
   if (currentIndex > 0) {
     currentIndex--;
+    updateSlidePosition();
+  }
+});
+
+// пересчёт при ресайзе (например, с мобилки на десктоп)
+window.addEventListener("resize", () => {
+  const visibleSlides = getVisibleSlides();
+  if (currentIndex > slides.length - visibleSlides) {
+    currentIndex = slides.length - visibleSlides;
     updateSlidePosition();
   }
 });

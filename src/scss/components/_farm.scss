@@ -12,6 +12,12 @@
   justify-content: center;
   align-items: center;
   gap: 12px;
+
+  @include mx.mq('lg') {
+    padding: 58px 104px 56px 104px;
+    margin-top: 0;
+    gap: 24px;
+  }
 }
 
 .fruit-farm-title-container {
@@ -25,6 +31,10 @@
   @extend %offer-title;
 
   color: fn.get-color('secondary-dark-active');
+
+  @include mx.mq('lg') {
+    font-size: 33px;
+  }
 }
 
 .fruit-farm-text-mob {
@@ -33,13 +43,20 @@
   text-align: center;
   color: fn.get-color('secondary-dark-active');
   width: 400px;
+
+  @include mx.mq('lg') {
+    font-size: 23px;
+    width: 1300px;
+  }
 }
 
 .fruit-farm-text-dt {
+  @extend %farm-text;
   display: none;
 
   @include mx.mq('lg') {
     display: block;
+    font-size: 23px;
   }
 }
 
@@ -47,6 +64,10 @@
   position: relative;
   overflow: hidden;
   width: 400px;
+
+  @include mx.mq('lg') {
+    width: 1520px;
+  }
 }
 
 .fruit-farm-slides {
@@ -54,6 +75,10 @@
   gap: 12px;
   align-items: center;
   transition: transform 0.5s ease-in-out;
+
+  @include mx.mq('lg') {
+    gap: 24px;
+  }
 }
 
 .fruit-farm-slide {
@@ -61,6 +86,11 @@
   flex-shrink: 0;
   width: 194px;
   height: 202px;
+
+  @include mx.mq('lg') {
+    width: 490px;
+    height: 412px;
+  }
 }
 
 .fruit-farm-slide-img img {
@@ -69,6 +99,11 @@
   height: 202px;
   object-fit: cover;
   display: block;
+
+  @include mx.mq('lg') {
+    width: 490px;
+    height: 412px;
+  }
 }
 
 .fruit-farm-slide-name {
@@ -91,16 +126,43 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @include mx.mq('lg') {
+    font-size: 23px;
+    top: 365px;
+    width: 200px;
+    height: 56px;
+  }
+}
+
+.fruit-farm-icon {
+  width: 32px;
+  height: 32px;
+
+  @include mx.mq('lg') {
+    width: 64px;
+    height: 64px;
+  }
 }
 
 .fruit-farm-prev {
-    position: absolute;
-    top: 85px;
-    left: 5px;
+  position: absolute;
+  top: 85px;
+  left: 5px;
+
+  @include mx.mq('lg') {
+    top: 169px;
+    left: 6px;
+  }
 }
 
 .fruit-farm-next {
-    position: absolute;
-    top: 85px;
-    right: 5px;
+  position: absolute;
+  top: 85px;
+  right: 5px;
+
+  @include mx.mq('lg') {
+    top: 169px;
+    right: 6px;
+  }
 }
