@@ -6,7 +6,6 @@
 .farm-cards {
   padding: 23px 15px;
   background-color: fn.get-color('primary-50');
-  margin-top: 21px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -20,6 +19,14 @@
   }
 }
 
+.primary {
+  background-color: fn.get-color('primary-50');
+}
+
+.darker {
+  background-color: fn.get-color('secondary-darker');
+}
+
 .farm-cards-title-container {
   display: flex;
   gap: 20px;
@@ -30,18 +37,23 @@
 .farm-cards-title {
   @extend %offer-title;
 
-  color: fn.get-color('secondary-dark-active');
-
   @include mx.mq('lg') {
     font-size: 33px;
   }
+}
+
+.ligth {
+  color: fn.get-color('secondary-light');
+}
+
+.dark {
+  color: fn.get-color('secondary-dark-active');
 }
 
 .farm-cards-text-mob {
   @extend %farm-text;
 
   text-align: center;
-  color: fn.get-color('secondary-dark-active');
   width: 400px;
 
   @include mx.mq('lg') {
@@ -93,7 +105,7 @@
   }
 }
 
-.farm-cards-slide-img img {
+.farm-cards-slide-img {
   border-radius: 16px;
   width: 194px;
   height: 202px;
