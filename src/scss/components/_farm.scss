@@ -3,7 +3,7 @@
 @use '../utils/functions' as fn;
 @use '../utils/mixins' as mx;
 
-.fruit-farm {
+.farm-cards {
   padding: 23px 15px;
   background-color: fn.get-color('primary-50');
   margin-top: 21px;
@@ -20,14 +20,14 @@
   }
 }
 
-.fruit-farm-title-container {
+.farm-cards-title-container {
   display: flex;
   gap: 20px;
   justify-content: center;
   align-items: center;
 }
 
-.fruit-farm-title {
+.farm-cards-title {
   @extend %offer-title;
 
   color: fn.get-color('secondary-dark-active');
@@ -37,7 +37,7 @@
   }
 }
 
-.fruit-farm-text-mob {
+.farm-cards-text-mob {
   @extend %farm-text;
 
   text-align: center;
@@ -50,7 +50,7 @@
   }
 }
 
-.fruit-farm-text-dt {
+.farm-cards-text-dt {
   @extend %farm-text;
   display: none;
 
@@ -60,7 +60,7 @@
   }
 }
 
-.fruit-farm-slider {
+.farm-cards-slider {
   position: relative;
   overflow: hidden;
   width: 400px;
@@ -70,7 +70,7 @@
   }
 }
 
-.fruit-farm-slides {
+.farm-cards-slides {
   display: flex;
   gap: 12px;
   align-items: center;
@@ -81,7 +81,7 @@
   }
 }
 
-.fruit-farm-slide {
+.farm-cards-slide {
   position: relative;
   flex-shrink: 0;
   width: 194px;
@@ -93,7 +93,7 @@
   }
 }
 
-.fruit-farm-slide-img img {
+.farm-cards-slide-img img {
   border-radius: 16px;
   width: 194px;
   height: 202px;
@@ -106,7 +106,7 @@
   }
 }
 
-.fruit-farm-slide-name {
+.farm-cards-slide-name {
   @extend %choose-title;
 
   position: absolute;
@@ -135,7 +135,7 @@
   }
 }
 
-.fruit-farm-icon {
+.farm-cards-icon {
   width: 32px;
   height: 32px;
 
@@ -145,7 +145,7 @@
   }
 }
 
-.fruit-farm-prev {
+.farm-cards-prev {
   position: absolute;
   top: 85px;
   left: 5px;
@@ -156,7 +156,7 @@
   }
 }
 
-.fruit-farm-next {
+.farm-cards-next {
   position: absolute;
   top: 85px;
   right: 5px;

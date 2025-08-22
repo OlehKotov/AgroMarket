@@ -66,45 +66,59 @@ if (form) {
     form.reset();
   });
 }
-const slidesContainer = document.querySelector(".fruit-farm-slides");
-const slides = document.querySelectorAll(".fruit-farm-slide");
-const prevBtn = document.querySelector(".fruit-farm-prev");
-const nextBtn = document.querySelector(".fruit-farm-next");
+
+
+const slidesContainer = document.querySelector(".farm-cards-slides");
+const slides = document.querySelectorAll(".farm-cards-slide");
+const prevBtn = document.querySelector(".farm-cards-prev");
+const nextBtn = document.querySelector(".farm-cards-next");
 
 let currentIndex = 0;
-const slideGap = 12;
-const slideWidth = slides[0].offsetWidth + slideGap;
 
-// сколько карточек видно (2 или 3)
+
 function getVisibleSlides() {
-  const sliderWidth = document.querySelector(".fruit-farm-slider").offsetWidth;
-  return Math.floor(sliderWidth / slideWidth);
+  return window.innerWidth >= 1728 ? 3 : 2;
 }
 
-function updateSlidePosition() {
+
+function getSlideWidth() {
+  const slide = slides[0];
+  const gap = window.innerWidth >= 1728 ? 24 : 12;
+  return slide.offsetWidth + gap;
+}
+
+
+function updateSlider() {
+  const slideWidth = getSlideWidth();
   slidesContainer.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
 }
 
+
 nextBtn.addEventListener("click", () => {
-  const visibleSlides = getVisibleSlides();
-  if (currentIndex < slides.length - visibleSlides) {
+  const visible = getVisibleSlides();
+  if (currentIndex < slides.length - visible) {
     currentIndex++;
-    updateSlidePosition();
+    updateSlider();
   }
 });
+
 
 prevBtn.addEventListener("click", () => {
   if (currentIndex > 0) {
     currentIndex--;
-    updateSlidePosition();
+    updateSlider();
   }
 });
 
-// пересчёт при ресайзе (например, с мобилки на десктоп)
+
 window.addEventListener("resize", () => {
-  const visibleSlides = getVisibleSlides();
-  if (currentIndex > slides.length - visibleSlides) {
-    currentIndex = slides.length - visibleSlides;
-    updateSlidePosition();
+  const visible = getVisibleSlides();
+  if (currentIndex > slides.length - visible) {
+    currentIndex = slides.length - visible;
   }
+  if (currentIndex < 0) currentIndex = 0;
+  updateSlider();
 });
+
+
+updateSlider();
