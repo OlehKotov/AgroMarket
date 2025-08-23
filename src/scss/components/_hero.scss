@@ -4,36 +4,32 @@
 @use '../utils/mixins' as mx;
 
 .hero {
-  height: 615px;
-  background-image: url('./../img/hero_frame_mob.jpg');
+  background-image: image-set(
+    url('./../img/hero_frame_mob.jpg') 1x,
+    url('./../img/hero_frame_mob_2x.jpg') 2x
+  );
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   padding: 133px 15px;
-
-  @media only screen and (-webkit-min-device-pixel-ratio: 2),
-    only screen and (min-resolution: 192dpi) {
-    background-image: url('./../img/hero_frame_mob_2x.jpg');
-  }
+  height: 615px;
 
   @include mx.mq('lg') {
-    height: 1130px;
-    background-image: url('./../img/hero_frame_dt.jpg');
+    background-image: image-set(
+      url('./../img/hero_frame_dt.jpg') 1x,
+      url('./../img/hero_frame_dt_2x.jpg') 2x
+    );
     display: flex;
     justify-content: center;
     align-items: center;
-
-    @media only screen and (-webkit-min-device-pixel-ratio: 2),
-      only screen and (min-resolution: 192dpi) {
-      background-image: url('./../img/hero_frame_dt_2x.jpg');
-    }
+    height: 1130px;
   }
 }
 
 .hero-border {
   @include mx.mq('lg') {
     border: 25px solid;
-   border-color: rgba(fn.get-color('secondary-light-active'), 0.5);
+    border-color: rgba(fn.get-color('secondary-light-active'), 0.5);
     border-radius: 32px;
     width: 1500px;
     height: 1000px;

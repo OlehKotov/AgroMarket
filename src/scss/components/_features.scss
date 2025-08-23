@@ -4,25 +4,21 @@
 @use '../utils/mixins' as mx;
 
 .features {
-  background-image: url('./../img/features_frame_mob.jpg');
+  background-image: image-set(
+    url('./../img/features_frame_mob.jpg') 1x,
+    url('./../img/features_frame_mob_2x.jpg') 2x
+  );
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   padding: 110px 0 93px 0;
 
-  @media only screen and (-webkit-min-device-pixel-ratio: 2),
-    only screen and (min-resolution: 192dpi) {
-    background-image: url('./../img/features_frame_mob_2x.jpg');
-  }
-
   @include mx.mq('lg') {
-    background-image: url('./../img/features_frame_dt.jpg');
+    background-image: image-set(
+      url('./../img/features_frame_dt.jpg') 1x,
+      url('./../img/features_frame_dt_2x.jpg') 2x
+    );
     padding: 150px 102px;
-
-    @media only screen and (-webkit-min-device-pixel-ratio: 2),
-      only screen and (min-resolution: 192dpi) {
-      background-image: url('./../img/features_frame_dt_2x.jpg');
-    }
   }
 }
 

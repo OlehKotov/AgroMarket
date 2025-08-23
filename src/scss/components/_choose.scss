@@ -4,30 +4,26 @@
 @use '../utils/mixins' as mx;
 
 .choose {
-  background-image: url('./../img/choose_frame_mob.jpg');
+  background-image: image-set(
+    url('./../img/choose_frame_mob.jpg') 1x,
+    url('./../img/choose_frame_mob_2x.jpg') 2x
+  );
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   padding: 24px 90px 101px 90px;
   position: relative;
 
-  @media only screen and (-webkit-min-device-pixel-ratio: 2),
-    only screen and (min-resolution: 192dpi) {
-    background-image: url('./../img/choose_frame_mob_2x.jpg');
-  }
-
   @include mx.mq('lg') {
-    background-image: url('./../img/choose_frame_dt.jpg');
+    background-image: image-set(
+      url('./../img/choose_frame_dt.jpg') 1x,
+      url('./../img/choose_frame_dt_2x.jpg') 2x
+    );
     padding: 76px 148px 142px 220px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 408px;
-
-    @media only screen and (-webkit-min-device-pixel-ratio: 2),
-      only screen and (min-resolution: 192dpi) {
-      background-image: url('./../img/choose_frame_dt_2x.jpg');
-    }
   }
 }
 
@@ -137,7 +133,7 @@
 .choose-item-icon {
   width: 50px;
   height: 50px;
-   flex-shrink: 0;
+  flex-shrink: 0;
 
   @include mx.mq('lg') {
     width: 90px;

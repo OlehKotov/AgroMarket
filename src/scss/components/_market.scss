@@ -1,0 +1,89 @@
+@use '../utils/placeholders';
+@use '../utils/variables' as var;
+@use '../utils/functions' as fn;
+@use '../utils/mixins' as mx;
+
+.market-hero {
+  background-image: image-set(
+    url('./src/img/market/marketbgmob.jpg') 1x,
+    url('./src/img/market/marketbgmob_2x.jpg') 2x
+  );
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 430px;
+  height: 500px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+
+  @include mx.mq('lg') {
+    background-image: image-set(
+      url('./src/img/market/marketbgdt.jpg') 1x,
+      url('./src/img/market/marketbgdt_2x.jpg') 2x
+    );
+    width: 1728px;
+    height: 836px;
+    gap: 24px;
+    align-items: start;
+    padding: 270px 84px;
+  }
+}
+
+.market-hero_welcometext {
+  @extend %section-text;
+
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  text-align: center;
+  color: fn.get-color('white-50');
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 30px;
+    height: 5px;
+    background-color: fn.get-color('white-50');
+    border: 5px;
+  }
+
+  @include mx.mq('lg') {
+    font-size: 48px;
+    gap: 16px;
+
+    &::before {
+      width: 50px;
+    }
+  }
+}
+
+.market-hero_title {
+  @extend %offer-title;
+
+  text-align: center;
+  color: fn.get-color('white-50');
+
+  @include mx.mq('lg') {
+    font-size: 82px;
+  }
+}
+
+.market-hero_text {
+  @extend %farm-text;
+
+  width: 250px;
+  text-align: center;
+  color: fn.get-color('white-50');
+
+  @include mx.mq('lg') {
+    font-size: 28px;
+    width: auto;
+  }
+}

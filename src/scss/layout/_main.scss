@@ -2,3 +2,12 @@
 @use '../utils/variables' as var;
 @use '../utils/functions' as fn;
 @use '../utils/mixins' as mx;
+
+.main {
+  width: 430px;
+  margin: 0 auto;
+
+  @include mx.mq('lg') {
+    width: 1728px;
+  }
+}
