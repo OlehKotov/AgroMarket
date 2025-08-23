@@ -138,8 +138,8 @@ if (form) {
   function initFarmCardsSlider(root) {
     const track = root.querySelector('.farm-cards-slides');
     const items = Array.from(root.querySelectorAll('.farm-cards-slide'));
-    const prev = root.querySelector('.farm-cards-prev');
-    const next = root.querySelector('.farm-cards-next');
+    const prev = root.querySelector('.farm-cards-slider-btn--prev');
+    const next = root.querySelector('.farm-cards-slider-btn--next');
     if (!track || !items.length || !prev || !next) return;
 
     let index = 0;

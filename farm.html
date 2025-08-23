@@ -35,22 +35,24 @@
         </svg>
       </button>
 
-      <ul class="menu-list">
-        <li class="menu-item">
-          <a class="menu-link" href="./index.html"> Home </a>
-        </li>
-        <li class="menu-item">
-          <a class="menu-link current" href="./farm-header.html"> Farm </a>
-        </li>
-        <li class="menu-item">
-          <a class="menu-link" href=""> Market </a>
-        </li>
-      </ul>
+      <nav class="main-nav">
+        <ul class="menu-list">
+          <li class="menu-item">
+            <a class="menu-link" href="./index.html"> Home </a>
+          </li>
+          <li class="menu-item">
+            <a class="menu-link current" href="./farm-header.html"> Farm </a>
+          </li>
+          <li class="menu-item">
+            <a class="menu-link" href=""> Market </a>
+          </li>
+        </ul>
+      </nav>
 
       <div class="cart-link">
         <a class="cart-link-icon" href="">
           <svg class="menu-icon" width="44" height="44">
-            <use xlink:href="./src/img/icons.svg#icon-cart-icon"></use>
+            <use href="./src/img/icons.svg#icon-cart-icon"></use>
           </svg>
         </a>
         <button class="active-btn btn btn--active" type="button">
@@ -98,79 +100,80 @@
     </header>
 
     <main class="main">
-      <section class="farm-cards primary">
+      <section class="farm-cards farm-cards--primary">
         <div class="farm-cards-title-container">
           <svg class="farm-cards-title-icon" width="32" height="32">
             <use href="./src/img/icons.svg#Fruit"></use>
           </svg>
-          <h2 class="farm-cards-title dark">Fruit Farm</h2>
+          <h2 class="farm-cards-title farm-cards-title--dark">Fruit Farm</h2>
         </div>
-        <p class="farm-cards-text-mob dark">
+        <p class="farm-cards-text farm-cards-text--mob farm-cards-text--dark">
           Lorem ipsum dolor sit amet consectetur. Malesuada euismod laoreet
           fermentum venenatis est lobortis orci.
-          <span class="farm-cards-text-dt dark"
+          <span
+            class="farm-cards-text farm-cards-text--dt farm-cards-text--dark"
             >Et hac eu morbi et mauris nunc enim elit. Nunc tortor enim morbi
             tincidunt accumsan lectus. Dictum mi mattis nibh</span
           >
         </p>
         <div class="farm-cards-slider">
-          <div class="farm-cards-slides">
-            <div class="farm-cards-slide">
+          <ul class="farm-cards-slides">
+            <li class="farm-cards-slide">
               <img
                 class="farm-cards-slide-img"
                 src="./src/img/slider/fruit/orange.png"
-                alt="orange" />
-              <div class="farm-cards-slide-name">Orange Farm</div>
-            </div>
+                alt="Orange Farm" />
+              <p class="farm-cards-slide-name">Orange Farm</p>
+            </li>
 
-            <div class="farm-cards-slide">
+            <li class="farm-cards-slide">
               <img
                 class="farm-cards-slide-img"
                 src="./src/img/slider/fruit/apple.png"
-                alt="apple" />
-              <div class="farm-cards-slide-name">Apple Farm</div>
-            </div>
+                alt="Apple Farm" />
+              <p class="farm-cards-slide-name">Apple Farm</p>
+            </li>
 
-            <div class="farm-cards-slide">
+            <li class="farm-cards-slide">
               <img
                 class="farm-cards-slide-img"
                 src="./src/img/slider/fruit/mango.png"
-                alt="mango" />
-              <div class="farm-cards-slide-name">Mango Farm</div>
-            </div>
+                alt="Mango Farm" />
+              <p class="farm-cards-slide-name">Mango Farm</p>
+            </li>
 
-            <div class="farm-cards-slide">
+            <li class="farm-cards-slide">
               <img
                 class="farm-cards-slide-img"
                 src="./src/img/slider/fruit/banana.png"
-                alt="banana" />
-              <div class="farm-cards-slide-name">Banana Farm</div>
-            </div>
+                alt="Banana Farm" />
+              <p class="farm-cards-slide-name">Banana Farm</p>
+            </li>
 
-            <div class="farm-cards-slide">
+            <li class="farm-cards-slide">
               <img
                 class="farm-cards-slide-img"
                 src="./src/img/slider/fruit/pineapple.png"
-                alt="pineapple" />
-              <div class="farm-cards-slide-name">Pineapple Farm</div>
-            </div>
+                alt="Pineapple Farm" />
+              <p class="farm-cards-slide-name">Pineapple Farm</p>
+            </li>
 
-            <div class="farm-cards-slide">
+            <li class="farm-cards-slide">
               <img
                 class="farm-cards-slide-img"
                 src="./src/img/slider/fruit/pawpaw.png"
-                alt="pawpaw" />
-              <div class="farm-cards-slide-name">Pawpaw Farm</div>
-            </div>
-          </div>
+                alt="Pawpaw Farm" />
+              <p class="farm-cards-slide-name">Pawpaw Farm</p>
+            </li>
+          </ul>
 
-          <button class="farm-cards-prev">
+          <button class="farm-cards-slider-btn farm-cards-slider-btn--prev">
             <svg class="farm-cards-icon">
               <use href="./src/img/icons.svg#icon-prev"></use>
             </svg>
           </button>
 
-          <button class="farm-cards-next">
+          <button class="farm-cards-slider-btn farm-cards-slider-btn--next">
             <svg class="farm-cards-icon">
               <use href="./src/img/icons.svg#icon-next"></use>
             </svg>
@@ -178,79 +181,80 @@
         </div>
       </section>
 
-      <section class="farm-cards darker">
+      <section class="farm-cards farm-cards--darker">
         <div class="farm-cards-title-container">
           <svg class="farm-cards-title-icon" width="32" height="32">
             <use href="./src/img/icons.svg#Crops"></use>
           </svg>
-          <h2 class="farm-cards-title light">Food Crops</h2>
+          <h2 class="farm-cards-title farm-cards-title--light">Food Crops</h2>
         </div>
-        <p class="farm-cards-text-mob light">
+        <p class="farm-cards-text farm-cards-text--mob farm-cards-text--light">
           Lorem ipsum dolor sit amet consectetur. Malesuada euismod laoreet
           fermentum venenatis est lobortis orci.
-          <span class="farm-cards-text-dt light"
+          <span
+            class="farm-cards-text farm-cards-text--dt farm-cards-text--light"
             >Et hac eu morbi et mauris nunc enim elit. Nunc tortor enim morbi
             tincidunt accumsan lectus. Dictum mi mattis nibh</span
           >
         </p>
         <div class="farm-cards-slider">
-          <div class="farm-cards-slides">
-            <div class="farm-cards-slide">
+          <ul class="farm-cards-slides">
+            <li class="farm-cards-slide">
               <img
                 class="farm-cards-slide-img"
                 src="./src/img/slider/crops/maize.png"
-                alt="maize" />
-              <div class="farm-cards-slide-name">Maize Farm</div>
-            </div>
+                alt="Maize Farm" />
+              <p class="farm-cards-slide-name">Maize Farm</p>
+            </li>
 
-            <div class="farm-cards-slide">
+            <li class="farm-cards-slide">
               <img
                 class="farm-cards-slide-img"
                 src="./src/img/slider/crops/rice.png"
-                alt="rice" />
-              <div class="farm-cards-slide-name">Rice Farm</div>
-            </div>
+                alt="Rice Farm" />
+              <p class="farm-cards-slide-name">Rice Farm</p>
+            </li>
 
-            <div class="farm-cards-slide">
+            <li class="farm-cards-slide">
               <img
                 class="farm-cards-slide-img"
                 src="./src/img/slider/crops/beans.png"
-                alt="beans" />
-              <div class="farm-cards-slide-name">Beans Farm</div>
-            </div>
+                alt="Beans Farm" />
+              <p class="farm-cards-slide-name">Beans Farm</p>
+            </li>
 
-            <div class="farm-cards-slide">
+            <li class="farm-cards-slide">
               <img
                 class="farm-cards-slide-img"
                 src="./src/img/slider/crops/yam.png"
-                alt="yam" />
-              <div class="farm-cards-slide-name">Yam Farm</div>
-            </div>
+                alt="Yam Farm" />
+              <p class="farm-cards-slide-name">Yam Farm</p>
+            </li>
 
-            <div class="farm-cards-slide">
+            <li class="farm-cards-slide">
               <img
                 class="farm-cards-slide-img"
                 src="./src/img/slider/crops/potato.png"
-                alt="potato" />
-              <div class="farm-cards-slide-name">Potato Farm</div>
-            </div>
+                alt="Potato Farm" />
+              <p class="farm-cards-slide-name">Potato Farm</p>
+            </li>
 
-            <div class="farm-cards-slide">
+            <li class="farm-cards-slide">
               <img
                 class="farm-cards-slide-img"
                 src="./src/img/slider/crops/wheat.png"
-                alt="wheat" />
-              <div class="farm-cards-slide-name">Wheat Farm</div>
-            </div>
-          </div>
+                alt="Wheat Farm" />
+              <p class="farm-cards-slide-name">Wheat Farm</p>
+            </li>
+          </ul>
 
-          <button class="farm-cards-prev">
+          <button class="farm-cards-slider-btn farm-cards-slider-btn--prev">
             <svg class="farm-cards-icon">
               <use href="./src/img/icons.svg#icon-prev"></use>
             </svg>
           </button>
 
-          <button class="farm-cards-next">
+          <button class="farm-cards-slider-btn farm-cards-slider-btn--next">
             <svg class="farm-cards-icon">
               <use href="./src/img/icons.svg#icon-next"></use>
             </svg>
@@ -258,79 +262,82 @@
         </div>
       </section>
 
-      <section class="farm-cards primary">
+      <section class="farm-cards farm-cards--primary">
         <div class="farm-cards-title-container">
           <svg class="farm-cards-title-icon" width="32" height="32">
             <use href="./src/img/icons.svg#Vegetables"></use>
           </svg>
-          <h2 class="farm-cards-title dark">Vegetables Farm</h2>
+          <h2 class="farm-cards-title farm-cards-title--dark">
+            Vegetables Farm
+          </h2>
         </div>
-        <p class="farm-cards-text-mob dark">
+        <p class="farm-cards-text farm-cards-text--mob farm-cards-text--dark">
           Lorem ipsum dolor sit amet consectetur. Malesuada euismod laoreet
           fermentum venenatis est lobortis orci.
-          <span class="farm-cards-text-dt dark"
+          <span
+            class="farm-cards-text farm-cards-text--dt farm-cards-text--dark"
             >Et hac eu morbi et mauris nunc enim elit. Nunc tortor enim morbi
             tincidunt accumsan lectus. Dictum mi mattis nibh</span
           >
         </p>
         <div class="farm-cards-slider">
-          <div class="farm-cards-slides">
-            <div class="farm-cards-slide">
+          <ul class="farm-cards-slides">
+            <li class="farm-cards-slide">
               <img
                 class="farm-cards-slide-img"
                 src="./src/img/slider/vegetables/lettuce.png"
-                alt="orange" />
-              <div class="farm-cards-slide-name">Lettuce Farm</div>
-            </div>
+                alt="Lettuce Farm" />
+              <p class="farm-cards-slide-name">Lettuce Farm</p>
+            </li>
 
-            <div class="farm-cards-slide">
+            <li class="farm-cards-slide">
               <img
                 class="farm-cards-slide-img"
                 src="./src/img/slider/vegetables/melon.png"
-                alt="apple" />
-              <div class="farm-cards-slide-name">Melon Farm</div>
-            </div>
+                alt="Melon Farm" />
+              <p class="farm-cards-slide-name">Melon Farm</p>
+            </li>
 
-            <div class="farm-cards-slide">
+            <li class="farm-cards-slide">
               <img
                 class="farm-cards-slide-img"
                 src="./src/img/slider/vegetables/tomato.png"
-                alt="mango" />
-              <div class="farm-cards-slide-name">Tomato Farm</div>
-            </div>
+                alt="Tomato Farm" />
+              <p class="farm-cards-slide-name">Tomato Farm</p>
+            </li>
 
-            <div class="farm-cards-slide">
+            <li class="farm-cards-slide">
               <img
                 class="farm-cards-slide-img"
                 src="./src/img/slider/vegetables/spinach.png"
-                alt="banana" />
-              <div class="farm-cards-slide-name">Spinach Farm</div>
-            </div>
+                alt="Spinach Farm" />
+              <p class="farm-cards-slide-name">Spinach Farm</p>
+            </li>
 
-            <div class="farm-cards-slide">
+            <li class="farm-cards-slide">
               <img
                 class="farm-cards-slide-img"
                 src="./src/img/slider/vegetables/ewedu.png"
-                alt="pineapple" />
-              <div class="farm-cards-slide-name">Ewedu Farm</div>
-            </div>
+                alt="Ewedu Farm" />
+              <p class="farm-cards-slide-name">Ewedu Farm</p>
+            </li>
 
-            <div class="farm-cards-slide">
+            <li class="farm-cards-slide">
               <img
                 class="farm-cards-slide-img"
                 src="./src/img/slider/vegetables/pepper.png"
-                alt="pawpaw" />
-              <div class="farm-cards-slide-name">Pepper Farm</div>
-            </div>
-          </div>
+                alt="Pepper Farm" />
+              <p class="farm-cards-slide-name">Pepper Farm</p>
+            </li>
+          </ul>
 
-          <button class="farm-cards-prev">
+          <button class="farm-cards-slider-btn farm-cards-slider-btn--prev">
             <svg class="farm-cards-icon">
               <use href="./src/img/icons.svg#icon-prev"></use>
             </svg>
           </button>
 
-          <button class="farm-cards-next">
+          <button class="farm-cards-slider-btn farm-cards-slider-btn--next">
             <svg class="farm-cards-icon">
               <use href="./src/img/icons.svg#icon-next"></use>
             </svg>
@@ -338,79 +345,80 @@
         </div>
       </section>
 
-      <section class="farm-cards darker">
+      <section class="farm-cards farm-cards--darker">
         <div class="farm-cards-title-container">
           <svg class="farm-cards-title-icon" width="32" height="32">
             <use href="./src/img/icons.svg#Poultry"></use>
           </svg>
-          <h2 class="farm-cards-title light">Poultry Farm</h2>
+          <h2 class="farm-cards-title farm-cards-title--light">Poultry Farm</h2>
         </div>
-        <p class="farm-cards-text-mob light">
+        <p class="farm-cards-text farm-cards-text--mob farm-cards-text--light">
           Lorem ipsum dolor sit amet consectetur. Malesuada euismod laoreet
           fermentum venenatis est lobortis orci.
-          <span class="farm-cards-text-dt light"
+          <span
+            class="farm-cards-text farm-cards-text--dt farm-cards-text--light"
             >Et hac eu morbi et mauris nunc enim elit. Nunc tortor enim morbi
             tincidunt accumsan lectus. Dictum mi mattis nibh</span
           >
         </p>
         <div class="farm-cards-slider">
-          <div class="farm-cards-slides">
-            <div class="farm-cards-slide">
+          <ul class="farm-cards-slides">
+            <li class="farm-cards-slide">
               <img
                 class="farm-cards-slide-img"
                 src="./src/img/slider/poultry/whitefowl.png"
-                alt="maize" />
-              <div class="farm-cards-slide-name">White Fowl Poultry</div>
-            </div>
+                alt="White Fowl Poultry" />
+              <p class="farm-cards-slide-name">White Fowl Poultry</p>
+            </li>
 
-            <div class="farm-cards-slide">
+            <li class="farm-cards-slide">
               <img
                 class="farm-cards-slide-img"
                 src="./src/img/slider/poultry/chicks.png"
-                alt="rice" />
-              <div class="farm-cards-slide-name">Chicks Poultry</div>
-            </div>
+                alt="Chicks Poultry" />
+              <p class="farm-cards-slide-name">Chicks Poultry</p>
+            </li>
 
-            <div class="farm-cards-slide">
+            <li class="farm-cards-slide">
               <img
                 class="farm-cards-slide-img"
                 src="./src/img/slider/poultry/layers.png"
-                alt="beans" />
-              <div class="farm-cards-slide-name">Layers Poultry</div>
-            </div>
+                alt="Layers Poultry" />
+              <p class="farm-cards-slide-name">Layers Poultry</p>
+            </li>
 
-            <div class="farm-cards-slide">
+            <li class="farm-cards-slide">
               <img
                 class="farm-cards-slide-img"
                 src="./src/img/slider/poultry/broiler.png"
-                alt="yam" />
-              <div class="farm-cards-slide-name">Broiler Poultry</div>
-            </div>
+                alt="Broiler Poultry" />
+              <p class="farm-cards-slide-name">Broiler Poultry</p>
+            </li>
 
-            <div class="farm-cards-slide">
+            <li class="farm-cards-slide">
               <img
                 class="farm-cards-slide-img"
                 src="./src/img/slider/poultry/blackfowl.png"
-                alt="potato" />
-              <div class="farm-cards-slide-name">Black Fowl Poultry</div>
-            </div>
+                alt="Black Fowl Poultry" />
+              <p class="farm-cards-slide-name">Black Fowl Poultry</p>
+            </li>
 
-            <div class="farm-cards-slide">
+            <li class="farm-cards-slide">
               <img
                 class="farm-cards-slide-img"
                 src="./src/img/slider/poultry/egg.png"
-                alt="wheat" />
-              <div class="farm-cards-slide-name">Egg Production</div>
-            </div>
-          </div>
+                alt="Egg Production" />
+              <p class="farm-cards-slide-name">Egg Production</p>
+            </li>
+          </ul>
 
-          <button class="farm-cards-prev">
+          <button class="farm-cards-slider-btn farm-cards-slider-btn--prev">
             <svg class="farm-cards-icon">
               <use href="./src/img/icons.svg#icon-prev"></use>
             </svg>
           </button>
 
-          <button class="farm-cards-next">
+          <button class="farm-cards-slider-btn farm-cards-slider-btn--next">
             <svg class="farm-cards-icon">
               <use href="./src/img/icons.svg#icon-next"></use>
             </svg>
@@ -418,79 +426,82 @@
         </div>
       </section>
 
-      <section class="farm-cards primary">
+      <section class="farm-cards farm-cards--primary">
         <div class="farm-cards-title-container">
           <svg class="farm-cards-title-icon" width="32" height="32">
             <use href="./src/img/icons.svg#Pisciculture"></use>
           </svg>
-          <h2 class="farm-cards-title dark">Pisciculture Farm</h2>
+          <h2 class="farm-cards-title farm-cards-title--dark">
+            Pisciculture Farm
+          </h2>
         </div>
-        <p class="farm-cards-text-mob dark">
+        <p class="farm-cards-text farm-cards-text--mob farm-cards-text--dark">
           Lorem ipsum dolor sit amet consectetur. Malesuada euismod laoreet
           fermentum venenatis est lobortis orci.
-          <span class="farm-cards-text-dt dark"
+          <span
+            class="farm-cards-text farm-cards-text--dt farm-cards-text--dark"
             >Et hac eu morbi et mauris nunc enim elit. Nunc tortor enim morbi
             tincidunt accumsan lectus. Dictum mi mattis nibh</span
           >
         </p>
         <div class="farm-cards-slider">
-          <div class="farm-cards-slides">
-            <div class="farm-cards-slide">
+          <ul class="farm-cards-slides">
+            <li class="farm-cards-slide">
               <img
                 class="farm-cards-slide-img"
                 src="./src/img/slider/pisciculture/fish.png"
-                alt="orange" />
-              <div class="farm-cards-slide-name">Beautiful Fish pond</div>
-            </div>
+                alt="Beautiful Fish pond" />
+              <p class="farm-cards-slide-name">Beautiful Fish pond</p>
+            </li>
 
-            <div class="farm-cards-slide">
+            <li class="farm-cards-slide">
               <img
                 class="farm-cards-slide-img"
                 src="./src/img/slider/pisciculture/duck.png"
-                alt="apple" />
-              <div class="farm-cards-slide-name">Duck Fish Pond</div>
-            </div>
+                alt="Duck Fish Pond" />
+              <p class="farm-cards-slide-name">Duck Fish Pond</p>
+            </li>
 
-            <div class="farm-cards-slide">
+            <li class="farm-cards-slide">
               <img
                 class="farm-cards-slide-img"
                 src="./src/img/slider/pisciculture/largefish.png"
-                alt="mango" />
-              <div class="farm-cards-slide-name">Large Fish Pond</div>
-            </div>
+                alt="Large Fish Pond" />
+              <p class="farm-cards-slide-name">Large Fish Pond</p>
+            </li>
 
-            <div class="farm-cards-slide">
+            <li class="farm-cards-slide">
               <img
                 class="farm-cards-slide-img"
                 src="./src/img/slider/pisciculture/goose.png"
-                alt="banana" />
-              <div class="farm-cards-slide-name">Goose Fish Pond</div>
-            </div>
+                alt="Goose Fish Pond" />
+              <p class="farm-cards-slide-name">Goose Fish Pond</p>
+            </li>
 
-            <div class="farm-cards-slide">
+            <li class="farm-cards-slide">
               <img
                 class="farm-cards-slide-img"
                 src="./src/img/slider/pisciculture/largefish2.png"
-                alt="pineapple" />
-              <div class="farm-cards-slide-name">Large Fish Pond</div>
-            </div>
+                alt="Large Fish Pond" />
+              <p class="farm-cards-slide-name">Large Fish Pond</p>
+            </li>
 
-            <div class="farm-cards-slide">
+            <li class="farm-cards-slide">
               <img
                 class="farm-cards-slide-img"
                 src="./src/img/slider/pisciculture/catfish.png"
-                alt="pawpaw" />
-              <div class="farm-cards-slide-name">Catfish Pond</div>
-            </div>
-          </div>
+                alt="Catfish Pond" />
+              <p class="farm-cards-slide-name">Catfish Pond</p>
+            </li>
+          </ul>
 
-          <button class="farm-cards-prev">
+          <button class="farm-cards-slider-btn farm-cards-slider-btn--prev">
             <svg class="farm-cards-icon">
               <use href="./src/img/icons.svg#icon-prev"></use>
             </svg>
           </button>
 
-          <button class="farm-cards-next">
+          <button class="farm-cards-slider-btn farm-cards-slider-btn--next">
             <svg class="farm-cards-icon">
               <use href="./src/img/icons.svg#icon-next"></use>
             </svg>
@@ -498,79 +509,82 @@
         </div>
       </section>
 
-      <section class="farm-cards darker">
+      <section class="farm-cards farm-cards--darker">
         <div class="farm-cards-title-container">
           <svg class="farm-cards-title-icon" width="32" height="32">
             <use href="./src/img/icons.svg#Animal"></use>
           </svg>
-          <h2 class="farm-cards-title light">Animal Husbandry</h2>
+          <h2 class="farm-cards-title farm-cards-title--light">
+            Animal Husbandry
+          </h2>
         </div>
-        <p class="farm-cards-text-mob light">
+        <p class="farm-cards-text farm-cards-text--mob farm-cards-text--light">
           Lorem ipsum dolor sit amet consectetur. Malesuada euismod laoreet
           fermentum venenatis est lobortis orci.
-          <span class="farm-cards-text-dt light"
+          <span
+            class="farm-cards-text farm-cards-text--dt farm-cards-text--light"
             >Et hac eu morbi et mauris nunc enim elit. Nunc tortor enim morbi
             tincidunt accumsan lectus. Dictum mi mattis nibh</span
           >
         </p>
         <div class="farm-cards-slider">
-          <div class="farm-cards-slides">
-            <div class="farm-cards-slide">
+          <ul class="farm-cards-slides">
+            <li class="farm-cards-slide">
               <img
                 class="farm-cards-slide-img"
                 src="./src/img/slider/animal/black.png"
-                alt="maize" />
-              <div class="farm-cards-slide-name">Black Cow Ranch</div>
-            </div>
+                alt="Black Cow Ranch" />
+              <p class="farm-cards-slide-name">Black Cow Ranch</p>
+            </li>
 
-            <div class="farm-cards-slide">
+            <li class="farm-cards-slide">
               <img
                 class="farm-cards-slide-img"
                 src="./src/img/slider/animal/brown.png"
-                alt="rice" />
-              <div class="farm-cards-slide-name">Brown Cow Ranch</div>
-            </div>
+                alt="Brown Cow Ranch" />
+              <p class="farm-cards-slide-name">Brown Cow Ranch</p>
+            </li>
 
-            <div class="farm-cards-slide">
+            <li class="farm-cards-slide">
               <img
                 class="farm-cards-slide-img"
                 src="./src/img/slider/animal/white.png"
-                alt="beans" />
-              <div class="farm-cards-slide-name">White Cow Ranch</div>
-            </div>
+                alt="White Cow Ranch" />
+              <p class="farm-cards-slide-name">White Cow Ranch</p>
+            </li>
 
-            <div class="farm-cards-slide">
+            <li class="farm-cards-slide">
               <img
                 class="farm-cards-slide-img"
                 src="./src/img/slider/animal/sheep.png"
-                alt="yam" />
-              <div class="farm-cards-slide-name">Sheep Farm</div>
-            </div>
+                alt="Sheep Farm" />
+              <p class="farm-cards-slide-name">Sheep Farm</p>
+            </li>
 
-            <div class="farm-cards-slide">
+            <li class="farm-cards-slide">
               <img
                 class="farm-cards-slide-img"
                 src="./src/img/slider/animal/pig.png"
-                alt="potato" />
-              <div class="farm-cards-slide-name">Pig Farm</div>
-            </div>
+                alt="Pig Farm" />
+              <p class="farm-cards-slide-name">Pig Farm</p>
+            </li>
 
-            <div class="farm-cards-slide">
+            <li class="farm-cards-slide">
               <img
                 class="farm-cards-slide-img"
                 src="./src/img/slider/animal/goat.png"
-                alt="wheat" />
-              <div class="farm-cards-slide-name">Goat farm</div>
-            </div>
-          </div>
+                alt="Goat farm" />
+              <p class="farm-cards-slide-name">Goat farm</p>
+            </li>
+          </ul>
 
-          <button class="farm-cards-prev">
+          <button class="farm-cards-slider-btn farm-cards-slider-btn--prev">
             <svg class="farm-cards-icon">
               <use href="./src/img/icons.svg#icon-prev"></use>
             </svg>
           </button>
 
-          <button class="farm-cards-next">
+          <button class="farm-cards-slider-btn farm-cards-slider-btn--next">
             <svg class="farm-cards-icon">
               <use href="./src/img/icons.svg#icon-next"></use>
             </svg>
@@ -606,7 +620,7 @@
       </div>
 
       <div class="footer-links">
-        <h2 class="footer-links-title">Quick Links</h2>
+        <h3 class="footer-links-title">Quick Links</h3>
         <ul class="footer-links-list">
           <li class="footer-links-item">
             <a class="footer-links-link" href="./index.html"> Home </a>
@@ -623,7 +637,7 @@
       </div>
 
       <div class="footer-contacts">
-        <h2 class="footer-contacts-title">Contacts</h2>
+        <h3 class="footer-contacts-title">Contacts</h3>
         <ul class="footer-contacts-list">
           <li class="footer-contacts-item">
             <span class="footer-contacts-item-title">Address:</span> Plot 5, Idu
