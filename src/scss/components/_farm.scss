@@ -126,10 +126,15 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
   border-radius: 8px;
   padding: 12px;
   width: 150px;
-  height: 50px;
+  min-height: 30px;
+  max-height: 50px;
   background-color: fn.get-color('primary-50');
   opacity: 0.8;
   text-align: center;
