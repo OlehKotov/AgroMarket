@@ -34,9 +34,10 @@ window.matchMedia('(min-width: 1200px)').addEventListener('change', event => {
   bodyScrollLock.enableBodyScroll(document.body);
 });
 
+//scroll lists
 document.addEventListener('DOMContentLoaded', () => {
   const scrollContainers = document.querySelectorAll(
-    '.offer-list, .partners-list'
+    '.offer-list, .partners-list, .market-category__list'
   );
 
   if (!scrollContainers.length) return;
@@ -58,6 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+//send form
 const form = document.querySelector('.newletter-form');
 if (form) {
   form.addEventListener('submit', function (e) {
@@ -67,67 +69,8 @@ if (form) {
   });
 }
 
-// function initFruitFarmSlider(slider) {
-// const slidesContainer = document.querySelector(".farm-cards-slides");
-// const slides = document.querySelectorAll(".farm-cards-slide");
-// const prevBtn = document.querySelector(".farm-cards-prev");
-// const nextBtn = document.querySelector(".farm-cards-next");
 
-// let currentIndex = 0;
-
-
-// function getVisibleSlides() {
-//   return window.innerWidth >= 1728 ? 3 : 2;
-// }
-
-
-// function getSlideWidth() {
-//   const slide = slides[0];
-//   const gap = window.innerWidth >= 1728 ? 24 : 12;
-//   return slide.offsetWidth + gap;
-// }
-
-
-// function updateSlider() {
-//   const slideWidth = getSlideWidth();
-//   slidesContainer.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-// }
-
-
-// nextBtn.addEventListener("click", () => {
-//   const visible = getVisibleSlides();
-//   if (currentIndex < slides.length - visible) {
-//     currentIndex++;
-//     updateSlider();
-//   }
-// });
-
-
-// prevBtn.addEventListener("click", () => {
-//   if (currentIndex > 0) {
-//     currentIndex--;
-//     updateSlider();
-//   }
-// });
-
-
-// window.addEventListener("resize", () => {
-//   const visible = getVisibleSlides();
-//   if (currentIndex > slides.length - visible) {
-//     currentIndex = slides.length - visible;
-//   }
-//   if (currentIndex < 0) currentIndex = 0;
-//   updateSlider();
-// });
-
-
-// updateSlider();
-// }
-
-// document.querySelectorAll(".fruit-farm-slider").forEach(slider => {
-//   initFruitFarmSlider(slider);
-// });
-
+//farm slider
 (() => {
   document.addEventListener('DOMContentLoaded', () => {
     const sliders = document.querySelectorAll('.farm-cards-slider');
