@@ -73,16 +73,16 @@ if (form) {
 //farm slider
 (() => {
   document.addEventListener('DOMContentLoaded', () => {
-    const sliders = document.querySelectorAll('.farm-cards-slider');
+    const sliders = document.querySelectorAll('.farm-cards__slider');
     if (!sliders.length) return;
     sliders.forEach(initFarmCardsSlider);
   });
 
   function initFarmCardsSlider(root) {
-    const track = root.querySelector('.farm-cards-slides');
-    const items = Array.from(root.querySelectorAll('.farm-cards-slide'));
-    const prev = root.querySelector('.farm-cards-slider-btn--prev');
-    const next = root.querySelector('.farm-cards-slider-btn--next');
+    const track = root.querySelector('.farm-cards__slides');
+    const items = Array.from(root.querySelectorAll('.farm-cards__slide'));
+    const prev = root.querySelector('.farm-cards__slider-btn--prev');
+    const next = root.querySelector('.farm-cards__slider-btn--next');
     if (!track || !items.length || !prev || !next) return;
 
     let index = 0;

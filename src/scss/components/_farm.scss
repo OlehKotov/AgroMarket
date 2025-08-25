@@ -27,14 +27,14 @@
 
 }
 
-.farm-cards-title-container {
+.farm-cards__title-container {
   display: flex;
   gap: 20px;
   justify-content: center;
   align-items: center;
 }
 
-.farm-cards-title {
+.farm-cards__title {
   @extend %offer-title;
 
   @include mx.mq('lg') {
@@ -50,7 +50,7 @@
   }
 }
 
-.farm-cards-text {
+.farm-cards__text {
   @extend %farm-text;
   text-align: center;
 
@@ -81,7 +81,7 @@
   }
 }
 
-.farm-cards-slider {
+.farm-cards__slider {
   position: relative;
   overflow: hidden;
   width: 400px;
@@ -91,7 +91,7 @@
   }
 }
 
-.farm-cards-slides {
+.farm-cards__slides {
   display: flex;
   gap: 12px;
   align-items: center;
@@ -102,7 +102,7 @@
   }
 }
 
-.farm-cards-slide {
+.farm-cards__slide {
   position: relative;
   flex-shrink: 0;
   width: 194px;
@@ -114,7 +114,7 @@
   }
 }
 
-.farm-cards-slide-img {
+.farm-cards__slide-img {
   border-radius: 16px;
   width: 194px;
   height: 202px;
@@ -127,7 +127,7 @@
   }
 }
 
-.farm-cards-slide-name {
+.farm-cards__slide-name{
   @extend %choose-title;
 
   position: absolute;
@@ -161,53 +161,7 @@
   }
 }
 
-.farm-cards-icon {
-  width: 32px;
-  height: 32px;
-
-  @include mx.mq('lg') {
-    width: 64px;
-    height: 64px;
-  }
-}
-
-
-
-// .farm-cards-prev {
-//   position: absolute;
-//   top: 50%;
-//   left: 5px;
-//   transform: translateY(-50%);
-//   transition: transform 0.2s ease;
-
-//   &:hover {
-//     transform: translateY(-50%) scale(1.1);
-//   }
-
-//   @include mx.mq('lg') {
-//     top: 50%;
-//     left: 6px;
-//   }
-// }
-
-// .farm-cards-next {
-//   position: absolute;
-//   top: 50%;
-//   right: 5px;
-//   transform: translateY(-50%);
-//   transition: transform 0.2s ease;
-
-//   &:hover {
-//     transform: translateY(-50%) scale(1.1);
-//   }
-
-//   @include mx.mq('lg') {
-//     top: 50%;
-//     right: 6px;
-//   }
-// }
-
-.farm-cards-slider-btn {
+.farm-cards__slider-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -232,7 +186,7 @@
   }
 }
 
-.farm-cards-icon {
+.farm-cards__icon {
   width: 32px;
   height: 32px;
 
