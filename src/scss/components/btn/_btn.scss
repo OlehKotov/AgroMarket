@@ -18,6 +18,8 @@ $btn-types: (
     hero,
     features,
     offer,
+    submit,
+    buy
 );
 
 @import "btn-base";
@@ -28,3 +30,4 @@ $btn-types: (
 @import "types/features";
 @import "types/offer";
 @import "types/submit";
+@import "types/buy";

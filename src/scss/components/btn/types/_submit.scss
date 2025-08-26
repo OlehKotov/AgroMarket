@@ -1,7 +1,7 @@
 @use '../../../utils/functions' as fn;
 @use '../../../utils/mixins' as mx;
 
-@if index($btn-types, offer) {
+@if index($btn-types, submit) {
   .btn--submit {
     background-color: fn.get-color('primary-900');
     color: fn.get-color('white-50');

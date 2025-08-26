@@ -1,0 +1,38 @@
+@use '../../../utils/functions' as fn;
+@use '../../../utils/mixins' as mx;
+
+@if index($btn-types, buy) {
+  .btn--buy {
+    background-color: fn.get-color('secondary-dark-active');
+    
+    padding: 10px;
+    border-radius: 100px;
+    width: 71px;
+    height: 38px;
+
+    // @include mx.mq('lg') {
+    //   padding: 10px;
+    //   width: 112px;
+    //   height: 38px;
+    // }
+
+    .btn-inner {
+      text-align: center;
+      color: fn.get-color('white-50');
+    }
+
+    &:active {
+      background-color: fn.get-color('secondary-dark-hover');
+    }
+
+    @media (hover: hover) {
+      &:hover,
+      &:focus {
+        background-color: fn.get-color('secondary-dark-hover');
+      }
+    }
+    &[disabled] {
+      background-color: #f5f5f5;
+    }
+  }
+}
