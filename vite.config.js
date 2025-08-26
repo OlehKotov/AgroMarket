@@ -7,7 +7,10 @@ import { fileURLToPath } from "url";
 import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 import purgecss from "@fullhuman/postcss-purgecss";
 
+const repoName = "AgroMarket";
+
 export default defineConfig({
+  base: `/${repoName}/`,
   plugins: [
     ViteImageOptimizer({
       png: {

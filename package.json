@@ -1,13 +1,14 @@
 {
-  "name": "agromarket",
+  "name": "AgroMarket",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/agromarket/",
+    "build": "vite build --base=/AgroMarket/",
     "preview": "vite preview",
-    "watch": "npx vite build --watch"
+    "watch": "npx vite build --watch",
+    "deploy": "npm run build && rm -rf docs && cp -r dist docs"
   },
   "browserslist": [
     "cover 99.5%"
