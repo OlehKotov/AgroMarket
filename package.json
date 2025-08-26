@@ -5,10 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/AgroMarket/",
+    "build": "vite build",
     "preview": "vite preview",
-    "watch": "npx vite build --watch",
-    "deploy": "npm run build && rm -rf docs && cp -r dist docs"
+    "watch": "npx vite build --watch"
   },
   "browserslist": [
     "cover 99.5%"
