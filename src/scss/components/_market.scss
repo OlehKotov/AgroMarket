@@ -175,9 +175,13 @@
 .market-sale {
   padding: 31px 40px 0 40px;
   height: 1316px;
+  position: relative;
   overflow: hidden;
 
   background-color: fn.get-color('primary-50');
+
+  display: flex;
+  flex-direction: column;
 }
 
 .market-sale__section-title {
@@ -189,30 +193,22 @@
 
 .market-sale__list {
   display: flex;
+  flex-wrap: nowrap;
   flex-direction: column;
   gap: 24px;
   margin-top: 26px;
-  
-   overflow-y: auto;         /* скроллим только список */
-  padding-right: 20px;      /* чтобы контент не лип к скроллу */
 
-  scrollbar-width: thin;    /* Firefox */
-  scrollbar-color: fn.get-color('secondary-darker') transparent;
-  
-}
-
-.market-sale__list::-webkit-scrollbar {
-  width: 10px;             /* ширина скролла */
-}
-
-.market-sale__list::-webkit-scrollbar-track {
-  background: transparent; /* фон дорожки */
-}
-
-.market-sale__list::-webkit-scrollbar-thumb {
-  background: fn.get-color('secondary-darker'); /* цвет ползунка */
-  border-radius: 5px;
-  min-height: 60px; /* минимальная высота ползунка */
+  &::after {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    top: 95px;
+    right: 15px;
+    width: 10px;
+    height: 50px;
+    background-color: fn.get-color('secondary-darker');
+    border-radius: 5px;
+  }
 }
 
 .market-sale__item {
@@ -222,6 +218,7 @@
   width: 350px;
   height: 500px;
   overflow: hidden;
+  flex-shrink: 0;
 
   background-color: fn.get-color('white-50');
 }
