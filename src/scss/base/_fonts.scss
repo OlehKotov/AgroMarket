@@ -6,8 +6,8 @@ $fonts: var.$font-weights;
 @each $key, $value in $fonts {
    @font-face {
     font-family: 'Roboto';
-    src: url(../fonts/Roboto-#{$key}.wolf2) format('wolf2'),
-    url(../fonts/Roboto-#{$key}.wolf) format('wolf');
+    src: url(../fonts/Roboto-#{$key}.woff2) format('woff2'),
+    url(../fonts/Roboto-#{$key}.woff) format('woff');
     font-weight: $value;
     font-style: normal;
     font-display: swap;

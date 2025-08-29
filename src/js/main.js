@@ -146,4 +146,11 @@ if (form) {
   }
 })();
 
+const list = document.querySelector('.market-sale__list');
+new SimpleBar(list, {
+  autoHide: false,
+  scrollbarMinSize: 50,
+  scrollbarMaxSize: 50
+});
+
 
