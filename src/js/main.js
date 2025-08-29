@@ -146,7 +146,7 @@ if (form) {
   }
 })();
 
-const list = document.querySelector('.market-sale__list');
+const list = document.querySelector('.market-sale__scroll');
 new SimpleBar(list, {
   autoHide: false,
   scrollbarMinSize: 50,
