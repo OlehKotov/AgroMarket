@@ -170,8 +170,6 @@
   }
 }
 
-//========================================================
-
 .market-sale {
   padding: 31px 0px 26px 0px;
 
@@ -183,7 +181,7 @@
   overflow: visible;
 
   @include mx.mq('lg') {
-    padding: 69px 0 154px 125px;
+    padding: 69px 0 154px 0;
     gap: 71px;
   }
 }
@@ -204,12 +202,14 @@
   width: 376px;
   height: 1227px;
   position: relative;
-  margin: 0 auto;
-
+  margin-left: 40px;
+  margin-right: 14px;
+  
   @include mx.mq('lg') {
     width: 1542px;
     height: 1100px;
-    margin: 0;
+    margin-left: 125px;
+    margin-right: 61px;
   }
 }
 
@@ -226,6 +226,10 @@
     gap: 59px 64px;
     height: auto;
   }
+}
+
+.simplebar-track .simplebar-horizontal {
+  display: none;
 }
 
 .simplebar-track.simplebar-vertical {
