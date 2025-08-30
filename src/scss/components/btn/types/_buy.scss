@@ -10,12 +10,6 @@
     width: 71px;
     height: 38px;
 
-    // @include mx.mq('lg') {
-    //   padding: 10px;
-    //   width: 112px;
-    //   height: 38px;
-    // }
-
     .btn-inner {
       text-align: center;
       color: fn.get-color('white-50');

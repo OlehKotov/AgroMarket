@@ -147,10 +147,23 @@ if (form) {
 })();
 
 const list = document.querySelector('.market-sale__scroll');
-new SimpleBar(list, {
-  autoHide: false,
-  scrollbarMinSize: 50,
-  scrollbarMaxSize: 50
-});
+
+function initSimpleBar() {
+  if (list.SimpleBar) {
+    list.SimpleBar.unMount();
+  }
+
+  const isMobile = window.innerWidth <= 1728;
+
+  new SimpleBar(list, {
+    autoHide: false,
+    scrollbarMinSize: isMobile ? 50 : 100,
+    scrollbarMaxSize: isMobile ? 50 : 100
+  });
+}
+
+initSimpleBar();
+
+window.addEventListener("resize", initSimpleBar);
 
 
