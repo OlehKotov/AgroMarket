@@ -9,6 +9,7 @@ body {
   font-family: var.$font-family, sans-serif;
   color: fn.get-color('white-50');
   background-color: fn.get-color('primary-900');
+  line-height: 1.4;
 }
 
 button {

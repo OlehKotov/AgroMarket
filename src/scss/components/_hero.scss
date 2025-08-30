@@ -5,8 +5,8 @@
 
 .hero {
   background-image: image-set(
-    url('./../img/hero_frame_mob.jpg') 1x,
-    url('./../img/hero_frame_mob_2x.jpg') 2x
+    url('./../img/hero/hero_frame_mob.jpg') 1x,
+    url('./../img/hero/hero_frame_mob_2x.jpg') 2x
   );
   background-size: cover;
   background-position: center;
@@ -16,8 +16,8 @@
 
   @include mx.mq('lg') {
     background-image: image-set(
-      url('./../img/hero_frame_dt.jpg') 1x,
-      url('./../img/hero_frame_dt_2x.jpg') 2x
+      url('./../img/hero/hero_frame_dt.jpg') 1x,
+      url('./../img/hero/hero_frame_dt_2x.jpg') 2x
     );
     display: flex;
     justify-content: center;

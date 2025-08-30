@@ -10,7 +10,7 @@
 }
 
 .page-farm-header {
-  background-image: url('./../img/farm_header_mob.jpg');
+  background-image: url('./../img/farm/farm_header_mob.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -18,16 +18,16 @@
 
   @media only screen and (-webkit-min-device-pixel-ratio: 2),
     only screen and (min-resolution: 192dpi) {
-    background-image: url('./../img/farm_header_mob_2x.jpg');
+    background-image: url('./../img/farm/farm_header_mob_2x.jpg');
   }
 
   @include mx.mq('lg') {
-    background-image: url('./../img/farm_header_dt.jpg');
+    background-image: url('./../img/farm/farm_header_dt.jpg');
     min-height: 1180px;
 
     @media only screen and (-webkit-min-device-pixel-ratio: 2),
       only screen and (min-resolution: 192dpi) {
-      background-image: url('./../img/farm_header_dt_2x.jpg');
+      background-image: url('./../img/farm/farm_header_dt_2x.jpg');
     }
   }
 }

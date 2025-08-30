@@ -204,13 +204,19 @@
   position: relative;
   margin-left: 40px;
   margin-right: 14px;
-  
+  overflow-x: hidden;
+
   @include mx.mq('lg') {
     width: 1542px;
     height: 1100px;
     margin-left: 125px;
     margin-right: 61px;
+    overflow-x: hidden;
   }
+}
+
+.simplebar-track.simplebar-horizontal {
+  display: none !important;
 }
 
 .market-sale__list {
@@ -226,10 +232,6 @@
     gap: 59px 64px;
     height: auto;
   }
-}
-
-.simplebar-track .simplebar-horizontal {
-  display: none;
 }
 
 .simplebar-track.simplebar-vertical {
@@ -306,7 +308,6 @@
   margin-top: 16px;
 
   @include mx.mq('lg') {
-    
   }
 }
 

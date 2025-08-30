@@ -112,3 +112,9 @@ meter {
 ::-webkit-details-marker {
     display: none;
 }
+
+*, *::before, *::after {
+  font: inherit;
+  color: inherit;
+  line-height: inherit;
+}
